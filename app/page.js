@@ -8,7 +8,7 @@ import ImportantLinks from "@/components/ImportantLinks";
 import OurProjects from "@/components/OurProjects";
 import Partnership from "@/components/Partnership";
 import AboutProject from "@/components/AboutProject";
-
+import Grid from "@/components/TechSection"; 
 
 const sections = [
   {
@@ -42,7 +42,7 @@ const sections = [
 export default function Home() {
   return (
     <>
- 
+      {/* <Grid /> */}
       <Hero />
       <ImportantLinks />
       <OurProjects/>
