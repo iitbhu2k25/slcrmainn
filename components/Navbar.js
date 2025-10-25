@@ -157,7 +157,7 @@ export default function Navbar() {
             />
           </div>
         </div>
-        <h1 className="text-2xl lg:text-4xl xl:text-5xl text-center text-gray-900 font-bold font-garamond px-6">
+        <h1 className="text-3xl lg:text-4xl xl:text-5xl text-center text-gray-900 font-bold font-garamond px-6">
           Smart Laboratory on Clean River
         </h1>
         <div className="flex space-x-10 md:space-x-4 xl:space-x-1 justify-between items-center">
