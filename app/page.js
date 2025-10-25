@@ -42,7 +42,7 @@ const sections = [
 export default function Home() {
   return (
     <>
-      {/* <Grid /> */}
+      <Grid />
       <Hero />
       <ImportantLinks />
       <OurProjects/>
