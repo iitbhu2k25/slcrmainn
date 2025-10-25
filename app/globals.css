@@ -1,15 +1,17 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary-600: #3b82f6;
+  --color-secondary-600: #8b5cf6;
+  --color-background: #ffffff;
+  --color-foreground: #171717;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,10 +19,48 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+  
+  @theme {
+    --color-background: #0a0a0a;
+    --color-foreground: #ededed;
+  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  @apply bg-gradient-to-br from-slate-50 to-blue-50;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    @apply bg-gradient-to-br from-slate-900 to-slate-800;
+  }
+}
+
+/* Components */
+.card {
+  @apply bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300;
+}
+
+.card-hover {
+  @apply hover:-translate-y-1 hover:shadow-2xl;
+}
+
+.section-title {
+  @apply text-3xl md:text-4xl font-bold text-gray-900 mb-4;
+}
+
+.section-subtitle {
+  @apply text-lg md:text-xl text-gray-600 mb-8;
+}
+
+/* Utilities */
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-secondary-600;
+}
+
+.bg-glass {
+  @apply bg-white/80 backdrop-blur-md;
 }
