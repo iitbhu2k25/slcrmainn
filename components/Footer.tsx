@@ -14,32 +14,29 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-white text-neutral-700 py-6 border-t border-neutral-200">
-      <div className="container mx-auto text-center">
-        <p className="text-sm md:text-base font-light">
-          &copy; 2025 SLCR | All Rights Reserved
-        </p>
-        <p className="text-sm md:text-base font-light">
-          SLCR, Indian Institute of Technology, BHU, Varanasi.
-        </p>
-      </div>
-
-      <div className="mt-2 flex flex-wrap justify-center gap-4">
+    <footer className="bg-white text-neutral-700 py-3 border-t border-neutral-200">
+      {/* Logos */}
+      <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6 mb-2">
         {logos.map((src, index) => (
-          <div
-            key={index}
-            className="max-sm:w-[40px] flex justify-center items-center"
-          >
+          <div key={index} className="flex justify-center items-center p-1">
             <Image
               src={src}
               alt={`Logo ${index + 1}`}
-              width={60}
-              height={100}
+              width={50}
+              height={50}
               className="object-contain"
-              priority={true} // optional, ensures logos load fast
+              priority
             />
           </div>
         ))}
+      </div>
+
+      {/* Text */}
+      <div className="container mx-auto text-center">
+        <p className="text-xs md:text-sm font-light">&copy; 2025 SLCR | All Rights Reserved</p>
+        <p className="text-xs md:text-sm font-light">
+          SLCR, Indian Institute of Technology, BHU, Varanasi.
+        </p>
       </div>
     </footer>
   );

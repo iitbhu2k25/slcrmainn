@@ -8,7 +8,7 @@ import TechnologyCard from '@/components/technology/TechnologyCard';
 import TechnologyModal from '@/components/technology/TechnologyModal';
 import { technologies, categories, Technology } from '@/lib/data';
 
-export default function Home() {
+export default function Research() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedTechnology, setSelectedTechnology] = useState<Technology | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -176,33 +176,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="flex justify-center gap-8 mb-8 flex-wrap">
-            <div className="flex items-center gap-2">
-              <img src="/api/placeholder/40/40" alt="Ministry" className="w-10 h-10 rounded" />
-              <span className="text-sm">Ministry of Jal Shakti</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <img src="/api/placeholder/40/40" alt="Namami Gange" className="w-10 h-10 rounded" />
-              <span className="text-sm">Namami Gange</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <img src="/api/placeholder/40/40" alt="Embassy" className="w-10 h-10 rounded" />
-              <span className="text-sm">Embassy of Denmark</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <img src="/api/placeholder/40/40" alt="IIT" className="w-10 h-10 rounded" />
-              <span className="text-sm">IIT</span>
-            </div>
-          </div>
-          <p className="text-gray-400">
-            © 2025 Innovative Technologies Research. All rights reserved.
-          </p>
-        </div>
-      </footer>
-
+     
       {/* Technology Modal */}
       <TechnologyModal
         technology={selectedTechnology}
