@@ -32,9 +32,8 @@ const Dropdown = ({ label, children, isOpen, setIsOpen, type }) => (
       {label}
       <ChevronDown
         size={16}
-        className={`transition-transform duration-300 ${
-          isOpen ? "rotate-180" : "rotate-0"
-        }`}
+        className={`transition-transform duration-300 ${isOpen ? "rotate-180" : "rotate-0"
+          }`}
       />
     </button>
 
@@ -83,9 +82,8 @@ const MobileDropdown = ({ label, items, isOpen, setIsOpen, type }) => (
       {label}
       <ChevronDown
         size={18}
-        className={`transition-transform duration-300 ${
-          isOpen ? "rotate-180" : "rotate-0"
-        }`}
+        className={`transition-transform duration-300 ${isOpen ? "rotate-180" : "rotate-0"
+          }`}
       />
     </button>
 
@@ -136,101 +134,105 @@ export default function Navbar() {
   return (
     <nav className="w-full bg-white shadow-lg z-50 sticky top-0 right-0 left-0">
       {/* Header Section */}
-      <div className="flex max-md:flex-col max-md:gap-y-2 items-center justify-between p-2 lg:px-20">
-        <div className="flex space-x-10 justify-between items-center">
-          <div className="max-sm:w-[160px]">
+      <div className="flex max-md:flex-col max-md:gap-y-4 items-center justify-between p-4 lg:px-32">
+        <div className="flex space-x-12 justify-between items-center">
+          <div className="max-sm:w-[200px]">
             <Image
               src="/denmark.png"
               alt="ministry of denmark logo"
-              width={200}
-              height={70}
-              className="rounded-md object-cover "
+              width={250}
+              height={100}
+              className="rounded-md object-cover"
             />
           </div>
-          <div className="max-sm:w-[90px]">
+          <div className="max-sm:w-[120px]">
             <Image
               src="/Ministry_of_Jal_Shakti.svg"
               alt="Jal Shakti"
-              width={100}
-              height={70}
-              className="rounded-md object-cover "
+              width={120}
+              height={100}
+              className="rounded-md object-cover"
             />
           </div>
         </div>
         <h1 className="text-3xl lg:text-4xl xl:text-5xl text-center text-gray-900 font-bold font-garamond px-6">
           Smart Laboratory on Clean River
         </h1>
-        <div className="flex space-x-10 md:space-x-4 xl:space-x-1 justify-between items-center">
-          <div className="max-sm:w-[160px]">
+        <div className="flex space-x-12 md:space-x-6 xl:space-x-2 justify-between items-center">
+          <div className="max-sm:w-[120px]">
             <Image
               src="/Logo_edited.png"
               alt="slcr logo"
-              width={100}
-              height={70}
-              className="rounded-md object-cover "
+              width={120}
+              height={100}
+              className="rounded-md object-cover"
             />
           </div>
-          <div className="max-sm:w-[60px]">
+          <div className="max-sm:w-[80px]">
             <Image
               src="/namiti_gange.gif"
               alt="Namami gange logo"
-              width={70}
-              height={70}
-              className="rounded-md object-cover "
+              width={90}
+              height={100}
+              className="rounded-md object-cover"
             />
           </div>
         </div>
       </div>
       {/* Desktop Navigation */}
       <div className="border-t border-gray-200 bg-[#081f5c]">
-        <ul className="hidden md:flex justify-center space-x-12 py-4 text-md font-semibold text-gray-100">
-          <NavItem href="/" text="Home" />
-          <Dropdown
-            label="About"
-            isOpen={isDropdownOpen.about}
-            setIsOpen={setIsDropdownOpen}
-            type="about"
-          >
-            <DropdownItem href="/about/slcr" text="SLCR" />
-            <DropdownItem href="/about/partner" text="Partner Institutes" />
-          </Dropdown>
-          <NavItem href="/secretariat" text="Secretariat" />
-          <Dropdown
-            label="Projects"
-            href="/projects"
-            isOpen={isDropdownOpen.projects}
-            setIsOpen={setIsDropdownOpen}
-            type="projects"
-          >
-            <DropdownItem href="/projects/project1" text="DSS-WRM" />
-            <DropdownItem
-              href="/projects/project2"
-              text="Fingerprint Analysis"
-            />
-            <DropdownItem
-              href="/projects/project3"
-              text="Hydrological Modelling of Varuna"
-            />
-          </Dropdown>
-          <Dropdown
-            label="Activities"
-            isOpen={isDropdownOpen.activities}
-            setIsOpen={setIsDropdownOpen}
-            type="activities"
-          >
-            <DropdownItem href="/activities/rhar" text="RHAR 2025" />
-            <DropdownItem
-              href="/activities/peoples_varuna"
-              text="People’s Varuna"
-            />
-          </Dropdown>
-          <NavItem href="/data" text="Data" />
-          {/* <NavItem href="/media" text="Media" /> */}
-          <NavItem href="/media" text="Media and Gallery" />
-          <NavItem href="/contact" text="Contact" />
-        </ul>
+        {/* Desktop Navigation */}
+        <div className="hidden md:block px-4 lg:px-12 xl:px-16">
+          <ul className="flex justify-center space-x-16 items-center py-4 text-lg font-semibold text-gray-100">
+            <NavItem href="/" text="Home" />
+            <Dropdown
+              label="About"
+              isOpen={isDropdownOpen.about}
+              setIsOpen={setIsDropdownOpen}
+              type="about"
+            >
+              <DropdownItem href="/about/slcr" text="SLCR" />
+              <DropdownItem href="/about/partner" text="Partner Institutes" />
+            </Dropdown>
+            <NavItem href="/secretariat" text="Secretariat" />
+            <Dropdown
+              label="Projects"
+              href="/projects"
+              isOpen={isDropdownOpen.projects}
+              setIsOpen={setIsDropdownOpen}
+              type="projects"
+            >
+              <DropdownItem href="/projects/project1" text="DSS-WRM" />
+              <DropdownItem
+                href="/projects/project2"
+                text="Fingerprint Analysis"
+              />
+              <DropdownItem
+                href="/projects/project3"
+                text="Hydrological Modelling of Varuna"
+              />
+            </Dropdown>
+            <Dropdown
+              label="Activities"
+              isOpen={isDropdownOpen.activities}
+              setIsOpen={setIsDropdownOpen}
+              type="activities"
+            >
+              <DropdownItem href="/activities/rhar" text="RHAR 2025" />
+              <DropdownItem
+                href="/activities/peoples_varuna"
+                text="People’s Varuna"
+              />
+            </Dropdown>
+            <NavItem href="/data" text="Data" />
+            <NavItem href="/media" text="Media" />
+            <NavItem href="/gallery" text="Gallery" />
+            <NavItem href="/contact" text="Contact" />
+          </ul>
+        </div>
       </div>
-      {/* Mobile Menu Button */}
+
+      {/* Mobile Menu Button - No change needed here for spacing, it's responsive */}
       <div className="md:hidden flex justify-end px-4 py-3 bg-[#081f5c]">
         <button onClick={() => setIsOpen(!isOpen)} className="text-white">
           {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -246,7 +248,7 @@ export default function Navbar() {
             exit={{ opacity: 0, y: -10 }}
             className="z-50 md:hidden absolute left-0 right-0 bg-gray-100/95 backdrop-blur-lg shadow-lg"
           >
-            <ul className="flex flex-col text-lg font-medium text-gray-800 space-y-2 py-4">
+            <ul className="flex flex-col text-lg font-medium text-gray-800 space-y-1 py-3 px-4">
               <MobileNavItem href="/" text="Home" setIsOpen={setIsOpen} />
               <MobileDropdown
                 label="About"
@@ -291,9 +293,9 @@ export default function Navbar() {
                 ]}
               />
               <MobileNavItem href="/data" text="Data" setIsOpen={setIsOpen} />
-              {/* <MobileNavItem href="/media" text="Media" setIsOpen={setIsOpen} /> */}
+              <MobileNavItem href="/media" text="Media" setIsOpen={setIsOpen} />
               <MobileNavItem
-                href="/media"
+                href="/gallery"
                 text="Gallery"
                 setIsOpen={setIsOpen}
               />

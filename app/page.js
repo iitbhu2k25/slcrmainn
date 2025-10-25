@@ -9,6 +9,7 @@ import OurProjects from "@/components/OurProjects";
 import Partnership from "@/components/Partnership";
 import AboutProject from "@/components/AboutProject";
 
+
 const sections = [
   {
     title: "Indo - Denmark Partnership",
@@ -41,6 +42,7 @@ const sections = [
 export default function Home() {
   return (
     <>
+ 
       <Hero />
       <ImportantLinks />
       <OurProjects/>

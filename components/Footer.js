@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="bg-white text-neutral-700 py-6 border-t border-neutral-200">
+    <footer className="bg-white text-neutral-700 py-2 border-t border-neutral-200">
       <div className="container mx-auto text-center">
         <p className="text-sm md:text-base font-light">
           &copy; 2025 SLCR | All Rights Reserved
@@ -12,7 +12,7 @@ const Footer = () => {
         </p>
       </div>
 
-      <div className="mt-2 flex flex-wrap justify-center gap-4">
+      <div className="mt-8 flex flex-wrap justify-center gap-y-4 gap-x-6 px-4">
         {[
           "/img/iitbhu.png",
           "/img/ganga.jpg",
@@ -21,12 +21,15 @@ const Footer = () => {
           "/img/logo.png",
           "/img/download.png",
         ].map((src, index) => (
-          <div key={index} className=" max-sm:w-[40px] flex justify-center items-center">
+          <div
+            key={index}
+            className="max-sm:w-[45px] flex justify-center items-center"
+          >
             <Image
               src={src}
               alt={` logo ${index + 1}`}
-              width={60}
-              height={100}
+              width={85}  // Reduced from 80
+              height={55} // Reduced from 80
               className="object-contain"
             />
           </div>
