@@ -39,12 +39,7 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-wrap gap-4 justify-center">
-          <a
-            href="#technologies"
-            className="px-8 py-4 bg-gradient-to-r from-primary-600 to-secondary-600 text-white rounded-full font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300"
-          >
-            Explore Technologies
-          </a>
+          
           <a
             href="#categories"
             className="px-8 py-4 bg-white text-primary-600 rounded-full font-semibold shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 border-2 border-primary-600"

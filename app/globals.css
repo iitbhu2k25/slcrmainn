@@ -35,7 +35,7 @@ body {
 
 @media (prefers-color-scheme: dark) {
   body {
-    @apply bg-gradient-to-br from-slate-900 to-slate-800;
+    @apply bg-gradient-to-br from-slate-600 to-slate-100;
   }
 }
 

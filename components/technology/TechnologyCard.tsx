@@ -5,10 +5,10 @@ import { Technology } from '@/lib/data';
 
 interface TechnologyCardProps {
   technology: Technology;
-  onClick: () => void;
+
 }
 
-export default function TechnologyCard({ technology, onClick }: TechnologyCardProps) {
+export default function TechnologyCard({ technology}: TechnologyCardProps) {
   const categoryColors = {
     decentralized: 'bg-primary-100 text-primary-700 border-primary-200',
     'stp-improvement': 'bg-green-100 text-green-700 border-green-200',
@@ -18,7 +18,7 @@ export default function TechnologyCard({ technology, onClick }: TechnologyCardPr
 
   return (
     <button
-      onClick={onClick}
+    
       className="card card-hover p-6 text-left w-full group"
     >
       <div className="flex items-start justify-between mb-4">

@@ -1,17 +1,13 @@
 'use client';
 
-import { useState, useMemo } from 'react';
-import { Droplets, Leaf, Brain, Trash2, Search, Filter } from 'lucide-react';
-import Hero from '@/components/Hero';
+import { useRouter } from 'next/navigation';
+import { Droplets, Leaf, Brain, Trash2 } from 'lucide-react';
+import Hero from '@/components/technology/Hero';
 import CategoryCard from '@/components/technology/CategoryCard';
-import TechnologyCard from '@/components/technology/TechnologyCard';
-import TechnologyModal from '@/components/technology/TechnologyModal';
-import { technologies, categories, Technology } from '@/lib/data';
+import { technologies, categories } from '@/lib/data';
 
 export default function Research() {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [selectedTechnology, setSelectedTechnology] = useState<Technology | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
+  const router = useRouter();
 
   const categoryData = [
     {
@@ -44,33 +40,13 @@ export default function Research() {
     },
   ];
 
-  const filteredTechnologies = useMemo(() => {
-    let filtered = technologies;
-
-    if (selectedCategory) {
-      filtered = filtered.filter((tech) => tech.category === selectedCategory);
-    }
-
-    if (searchQuery) {
-      filtered = filtered.filter(
-        (tech) =>
-          tech.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          tech.country.toLowerCase().includes(searchQuery.toLowerCase())
-      );
-    }
-
-    return filtered;
-  }, [selectedCategory, searchQuery]);
-
-  const getCategoryCount = (category: string) => {
-    return technologies.filter((tech) => tech.category === category).length;
-  };
+  const getCategoryCount = (category: string) =>
+    technologies.filter((tech) => tech.category === category).length;
 
   return (
     <main className="min-h-screen">
       <Hero />
 
-      {/* Categories Section */}
       <section id="categories" className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -89,99 +65,12 @@ export default function Research() {
                 description={category.description}
                 count={getCategoryCount(category.key)}
                 color={category.color}
-                onClick={() => {
-                  setSelectedCategory(category.key);
-                  document.getElementById('technologies')?.scrollIntoView({ behavior: 'smooth' });
-                }}
+                onClick={() => router.push(`/technology/${category.key}`)}
               />
             ))}
           </div>
         </div>
       </section>
-
-      {/* Technologies Section */}
-      <section id="technologies" className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="section-title">All Technologies</h2>
-            <p className="section-subtitle">
-              Comprehensive collection of 45+ innovative wastewater treatment solutions
-            </p>
-          </div>
-
-          {/* Search and Filter */}
-          <div className="mb-8 flex flex-col md:flex-row gap-4">
-            <div className="flex-1 relative">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-              <input
-                type="text"
-                placeholder="Search by name or country..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 rounded-xl border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all"
-              />
-            </div>
-
-            <div className="flex gap-2 flex-wrap">
-              <button
-                onClick={() => setSelectedCategory(null)}
-                className={`px-6 py-4 rounded-xl font-semibold transition-all ${
-                  selectedCategory === null
-                    ? 'bg-gradient-to-r from-primary-600 to-secondary-600 text-white shadow-lg'
-                    : 'bg-white text-gray-700 border border-gray-200 hover:border-primary-300'
-                }`}
-              >
-                All ({technologies.length})
-              </button>
-              {categoryData.map((category) => (
-                <button
-                  key={category.key}
-                  onClick={() => setSelectedCategory(category.key)}
-                  className={`px-6 py-4 rounded-xl font-semibold transition-all ${
-                    selectedCategory === category.key
-                      ? 'bg-gradient-to-r from-primary-600 to-secondary-600 text-white shadow-lg'
-                      : 'bg-white text-gray-700 border border-gray-200 hover:border-primary-300'
-                  }`}
-                >
-                  {category.title.split(' & ')[0]} ({getCategoryCount(category.key)})
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Results count */}
-          <div className="mb-6 text-gray-600">
-            Showing <span className="font-semibold text-gray-900">{filteredTechnologies.length}</span>{' '}
-            {filteredTechnologies.length === 1 ? 'technology' : 'technologies'}
-          </div>
-
-          {/* Technologies Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredTechnologies.map((tech) => (
-              <TechnologyCard
-                key={tech.id}
-                technology={tech}
-                onClick={() => setSelectedTechnology(tech)}
-              />
-            ))}
-          </div>
-
-          {filteredTechnologies.length === 0 && (
-            <div className="text-center py-20">
-              <Filter className="w-16 h-16 text-gray-300 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">No technologies found</h3>
-              <p className="text-gray-600">Try adjusting your search or filter criteria</p>
-            </div>
-          )}
-        </div>
-      </section>
-
-     
-      {/* Technology Modal */}
-      <TechnologyModal
-        technology={selectedTechnology}
-        onClose={() => setSelectedTechnology(null)}
-      />
     </main>
   );
 }
