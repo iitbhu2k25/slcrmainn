@@ -12,8 +12,8 @@ export interface Technology {
   status?: string;
   references?: string[];
   images?: string[];
-  authors?: string[];
   institution?: string;
+  authors?: string[];
 }
 
 export const categories = {
@@ -68,7 +68,7 @@ export const technologies: Technology[] = [
     limitations: 'SBT type wastewater treatment plants require high land area of around 2.5 m²/ m³ of wastewater treatment.',
     status: 'Communication is under progress.',
     references: ['https://www.visionearthcare.com/technology/sbt'],
-    images: ['/Photos/Soil biotechnology (SBT)/Picture6.jpg', '/Photos/Soil biotechnology (SBT)/Picture7.png', '/Photos/Soil biotechnology (SBT)/Picture8.png'],
+    images: ['/Photos/Soil biotechnology (SBT)/Picture6.jpg', '/Photos/Soil biotechnology (SBT)/Picture7.png', '/Photos/Soil biotechnology (SBT)/Picture8.jpg'],
   },
   {
     id: 4,
@@ -83,7 +83,7 @@ export const technologies: Technology[] = [
     limitations: 'Requires approximately 35 sq.m. area for 20 m³/day treatment capacity. Treated water primarily suitable for non-potable uses like gardens, fountains, and irrigation.',
     status: 'Technology patented in India, Europe, and Australia. Widely commercialized and implemented across India.',
     references: ['CSIR-NEERI Nagpur', 'https://www.neeri.res.in', 'Alaknanda Technologies Pvt Ltd', 'Ministry of Drinking Water and Sanitation'],
-    images: ['/Photos/Phytorid/Picture12.png', '/Photos/Phytorid/Picture13.png'],
+    images: ['/Photos/Phytorid/Picture9.png', '/Photos/Phytorid/Picture10.png'],
   },
   {
     id: 5,
@@ -98,7 +98,7 @@ export const technologies: Technology[] = [
     limitations: 'Ice-liquid separation can be challenging. Scaling and fouling issues. Pre-treatment may be required for suspended solids. Capital cost can be high.',
     status: 'Emerging technology with ongoing pilot projects.',
     references: ['Various Indian research institutions'],
-    images: ['/Photos/Freeze Technology/Picture12.png', '/Photos/Freeze Technology/Picture13.png'],
+    images: ['/Photos/Freeze Technology/Picture11.png', '/Photos/Freeze Technology/Picture12.png'],
   },
   {
     id: 6,
@@ -113,7 +113,7 @@ export const technologies: Technology[] = [
     limitations: 'Requires specialized nanobubble generators. Initial capital investment for equipment. Performance depends on proper integration with existing systems. Not suitable for all contaminant types.',
     status: 'Commercially available and actively deployed. Major vendors include Moleaer (USA), NICO Nanobubble India Co.',
     references: ['Moleaer Inc.', 'NICO Nanobubble India Co.', 'Scientific literature in Water Research, Science of the Total Environment, ACS ES&T Engineering'],
-    images: ['/Photos/Nano-Bubble Generators/Picture12.png', '/Photos/Nano-Bubble Generators/Picture13.png'],
+    images: ['/Photos/Nano-Bubble Generators/Picture13.jpg', '/Photos/Nano-Bubble Generators/Picture14.jpg'],
   },
   {
     id: 7,
@@ -128,7 +128,7 @@ export const technologies: Technology[] = [
     limitations: 'Climate-dependent performance. Requires land area. Seasonal variations in efficiency.',
     status: 'Commercial technology available from Danish providers.',
     references: ['Danish water technology companies'],
-    images: ['/Photos/Watopi- BioKube, Denmark/Picture12.png', '/Photos/Watopi- BioKube, Denmark/Picture13.png'],
+    images: ['/Photos/Watopi- BioKube, Denmark/Picture15.png', '/Photos/Watopi- BioKube, Denmark/Picture16.jpg', '/Photos/Watopi- BioKube, Denmark/Picture17.jpg'],
   },
   {
     id: 8,
@@ -143,7 +143,7 @@ export const technologies: Technology[] = [
     limitations: 'Low power density compared to energy consumption of treatment. Expensive electrode materials. Membrane fouling. Scale-up challenges. Still largely in research/pilot phase for practical applications.',
     status: 'Emerging technology in transition from research to early commercial adoption.',
     references: ['Various US universities and research institutions', 'Scientific literature on bioelectrochemical systems'],
-    images: ['/Photos/Microbial Fuel Cell- Aquacyl; USA/Picture12.png', '/Photos/Microbial Fuel Cell- Aquacyl; USA/Picture13.png'],
+    images: ['/Photos/Microbial Fuel Cell- Aquacyl; USA/Picture18.png', '/Photos/Microbial Fuel Cell- Aquacyl; USA/Picture19.jpg'],
   },
   {
     id: 9,
@@ -158,7 +158,7 @@ export const technologies: Technology[] = [
     limitations: 'Requires regular maintenance and monitoring. Initial cost may be higher than conventional systems.',
     status: 'Commercial technology from Singapore-based company.',
     references: ['Singapore water technology sector'],
-    images: ['/Photos/Water Mantra-h2Omantra; Singapore/Picture12.png', '/Photos/Water Mantra-h2Omantra; Singapore/Picture13.png'],
+    images: ['/Photos/Water Mantra-h2Omantra; Singapore/Picture20.png', '/Photos/Water Mantra-h2Omantra; Singapore/Picture21.png', '/Photos/Water Mantra-h2Omantra; Singapore/Picture22.png'],
   },
   {
     id: 10,
@@ -173,7 +173,7 @@ export const technologies: Technology[] = [
     limitations: 'High energy consumption. Electrode cost and lifespan. Formation of chlorinated byproducts if chlorides present. Regular electrode maintenance required.',
     status: 'Commercial technology with established Indian suppliers.',
     references: ['Indian electrochemical technology providers', 'IIT research groups'],
-    images: ['/Photos/Electro Oxidation Technology; Pinakin/Picture12.png', '/Photos/Electro Oxidation Technology; Pinakin/Picture13.png'],
+    images: ['/Photos/Electro Oxidation Technology; Pinakin/Picture23.jpg', '/Photos/Electro Oxidation Technology; Pinakin/Picture24.png', '/Photos/Electro Oxidation Technology; Pinakin/Picture25.png'],
   },
   {
     id: 11,
@@ -188,7 +188,7 @@ export const technologies: Technology[] = [
     limitations: 'Operating costs for oxidant chemicals or UV power. Byproduct formation possible. Requires skilled operation.',
     status: 'Commercial solutions available from Danish water technology companies.',
     references: ['Danish Environmental Protection Agency', 'Nordic water technology providers'],
-    images: ['/Photos/Onsite Oxidation- hpnow; Denmark/Picture12.png', '/Photos/Onsite Oxidation- hpnow; Denmark/Picture13.png'],
+    images: ['/Photos/Onsite Oxidation- hpnow; Denmark/Picture26.jpg', '/Photos/Onsite Oxidation- hpnow; Denmark/Picture27.jpg'],
   },
   {
     id: 12,
@@ -203,7 +203,7 @@ export const technologies: Technology[] = [
     limitations: 'High energy requirement per volume treated. Electrode erosion. Suitable mainly for small flow rates. Capital cost can be significant.',
     status: 'Advanced development stage with pilot implementations.',
     references: ['German research institutions', 'Fraunhofer Institute', 'Technical universities'],
-    images: ['/Photos/Pulse Plasma- Fidtech; Germany/Picture12.png', '/Photos/Pulse Plasma- Fidtech; Germany/Picture13.png'],
+    images: ['/Photos/Pulse Plasma- Fidtech; Germany/Picture28.png', '/Photos/Pulse Plasma- Fidtech; Germany/Picture29.png', '/Photos/Pulse Plasma- Fidtech; Germany/Picture30.jpg'],
   },
   {
     id: 13,
@@ -218,7 +218,7 @@ export const technologies: Technology[] = [
     limitations: 'High capital investment. Requires skilled maintenance. Scaling/fouling issues with high hardness water. Not economical for very low TDS water.',
     status: 'Mature commercial technology with established vendors.',
     references: ['Danish industry', 'GEA Process Engineering', 'European ZLD providers'],
-    images: ['/Photos/MVR Technology- Envotherm; Denmark/Picture12.png', '/Photos/MVR Technology- Envotherm; Denmark/Picture13.png'],
+    images: ['/Photos/MVR Technology- Envotherm; Denmark/Picture31.png', '/Photos/MVR Technology- Envotherm; Denmark/Picture32.png'],
   },
   {
     id: 14,
@@ -233,7 +233,7 @@ export const technologies: Technology[] = [
     limitations: 'Requires large land area. Dewatering time is long (weeks to months). Performance affected by weather/climate. Not suitable where rapid turnaround needed. Final disposal of dewatered cake still required.',
     status: 'Established commercial technology. Solmax and other vendors provide turnkey solutions.',
     references: ['Solmax International', 'TenCate Geosynthetics', 'Indian and Australian environmental engineering firms'],
-    images: ['/Photos/Geotubes/Picture12.png', '/Photos/Geotubes/Picture13.png'],
+    images: ['/Photos/Geotubes/Picture33.jpg', '/Photos/Geotubes/Picture34.png'],
   },
   {
     id: 15,
@@ -248,7 +248,7 @@ export const technologies: Technology[] = [
     limitations: 'Media requires periodic replacement or regeneration. Pre-filtration needed to prevent clogging. Limited capacity requires sizing based on phosphorus load. Not effective for nitrogen removal.',
     status: 'Commercial technology with proven installations.',
     references: ['Advanced Water Management Inc.', 'US EPA nutrient removal case studies'],
-    images: ['/Photos/Poseidon Pellets/Picture12.png', '/Photos/Poseidon Pellets/Picture13.png'],
+    images: ['/Photos/Poseidon Pellets/Picture35.jpg', '/Photos/Poseidon Pellets/Picture36.jpg', '/Photos/Poseidon Pellets/Picture37.jpg'],
   },
   {
     id: 16,
@@ -263,7 +263,7 @@ export const technologies: Technology[] = [
     limitations: 'Generates chemical sludge requiring disposal. pH dependent. Chemical costs. Not effective alone for dissolved organics or nutrients. Overdosing can worsen water quality.',
     status: 'Mature technology continuously being improved with novel coagulants.',
     references: ['Chinese water treatment industry', 'Major coagulant manufacturers in China', 'Research from Tsinghua, Tongji universities'],
-    images: ['/Photos/Coagulation/Picture12.png', '/Photos/Coagulation/Picture13.png'],
+    images: ['/Photos/Coagulation/Picture38.png', '/Photos/Coagulation/Picture39.png'],
   },
   // STP Improvement
   {
@@ -279,7 +279,7 @@ export const technologies: Technology[] = [
     limitations: 'Membrane fouling requiring regular cleaning. Higher energy consumption for aeration and membrane operation. Membrane replacement costs. Requires skilled operation. Capital cost 20-40% higher than conventional treatment.',
     status: 'Mature commercial technology. Leading vendors: Suez (France), Evoqua (USA), Toray, Mitsubishi.',
     references: ['Suez Water Technologies', 'Evoqua', 'Membrane Bioreactor Industry Consortium', 'IWA MBR specialist group'],
-    images: ['/Photos/Membrane Bioreactor/Picture12.png', '/Photos/Membrane Bioreactor/Picture13.png'],
+    images: ['/Photos/Membrane Bioreactor/Picture40.png', '/Photos/Membrane Bioreactor/Picture41.jpg'],
   },
   {
     id: 18,
@@ -294,7 +294,7 @@ export const technologies: Technology[] = [
     limitations: 'Higher energy consumption than activated sludge to keep carriers suspended. Requires secondary clarifier for suspended solids separation (unless combined with membrane). Media replacement every 10-15 years. Not as effective as MBR for complete solid removal.',
     status: 'Mature proven technology. Major vendors: Veolia/AnoxKaldnes (Denmark), SSI Aeration, Ecologix.',
     references: ['AnoxKaldnes (Veolia)', 'SSI Aeration', 'Norwegian University of Science and Technology', 'Wikipedia MBBR article'],
-    images: ['/Photos/MBBR – Moving Bed Biofilm/Picture12.png', '/Photos/MBBR – Moving Bed Biofilm/Picture13.png'],
+    images: ['/Photos/Membrane Bioreactor/Picture40.png', '/Photos/Membrane Bioreactor/Picture41.jpg'],
   },
   {
     id: 19,
@@ -309,7 +309,7 @@ export const technologies: Technology[] = [
     limitations: 'More complex than pure MBBR or activated sludge. Requires careful balance between suspended and attached biomass. Mixing and aeration requirements higher than conventional AS. Media fouling possible with certain wastewaters.',
     status: 'Proven commercial technology for capacity upgrades.',
     references: ['InfraCor (Canada)', 'Evoqua Technologies', 'Various Canadian municipalities', 'WEF publications'],
-    images: ['/Photos/Integrated Fixed-film Activated Sludge/Picture12.png', '/Photos/Integrated Fixed-film Activated Sludge/Picture13.png'],
+    images: ['/Photos/Integrated Fixed-film Activated Sludge/Picture46.png', '/Photos/Integrated Fixed-film Activated Sludge/Picture47.emf'],
   },
   {
     id: 20,
@@ -324,7 +324,7 @@ export const technologies: Technology[] = [
     limitations: 'Membrane fouling and scaling requiring cleaning. Energy intensive especially for RO. Concentrate/brine disposal. Membrane replacement costs. Pre-treatment required for many applications.',
     status: 'Mature commercial technology with continuous innovation in materials and configurations.',
     references: ['Danish water technology sector', 'Major membrane manufacturers: Toray, Dow, Hydranautics, Pentair'],
-    images: ['/Photos/Membranes; Aquaporin/Picture12.png', '/Photos/Membranes; Aquaporin/Picture13.png'],
+    images: ['/Photos/Membranes; Aquaporin/Picture48.png', '/Photos/Membranes; Aquaporin/Picture49.png', '/Photos/Membranes; Aquaporin/Picture50.png'],
   },
   {
     id: 21,
@@ -339,7 +339,7 @@ export const technologies: Technology[] = [
     limitations: 'Higher capital cost (2-3x polymeric membranes). Brittleness requires careful handling. Limited suppliers compared to polymeric. Not available in all configurations (no spiral wound).',
     status: 'Established technology with expanding market. Expected to grow as costs decrease.',
     references: ['LiqTech (Denmark)', 'TAMI Industries', 'Metawater', 'Danish Technological Institute'],
-    images: ['/Photos/Ceramic Membrane Filtration/Picture12.png', '/Photos/Ceramic Membrane Filtration/Picture13.png'],
+    images: ['/Photos/Ceramic Membrane Filtration/Picture51.png'],
   },
   {
     id: 22,
@@ -354,7 +354,7 @@ export const technologies: Technology[] = [
     limitations: 'Requires sunlight - limited in cloudy regions or winter. Seasonal performance variation. Mechanical complexity of rotating system. Capital and maintenance costs. Algae biomass utilization pathways still developing.',
     status: 'Emerging commercial technology transitioning from research.',
     references: ['US DOE funded projects', 'Utah State University research', 'Gross-Wen Technologies'],
-    images: ['/Photos/Revolving Algal Biofilm System/Picture12.png', '/Photos/Revolving Algal Biofilm System/Picture13.png'],
+    images: ['/Photos/Revolving Algal Biofilm System/Picture52.png', '/Photos/Revolving Algal Biofilm System/Picture53.png', '/Photos/Revolving Algal Biofilm System/Picture54.png'],
   },
   {
     id: 23,
@@ -369,7 +369,7 @@ export const technologies: Technology[] = [
     limitations: 'Probe fouling requiring cleaning. Interference from other fluorescent compounds. Requires calibration and correlation with conventional parameters. Cost of sensors and control systems.',
     status: 'Commercial technology with proven applications.',
     references: ['Real Tech Inc.', 'Hach Company', 'Endress+Hauser', 'Scientific literature on biological process monitoring'],
-    images: ['/Photos/Nicotinamide Adenine Dinucleotide/Picture12.png', '/Photos/Nicotinamide Adenine Dinucleotide/Picture13.png'],
+    images: ['/Photos/Nicotinamide Adenine Dinucleotide/Picture55.png', '/Photos/Nicotinamide Adenine Dinucleotide/Picture56.png'],
   },
   {
     id: 24,
@@ -384,7 +384,7 @@ export const technologies: Technology[] = [
     limitations: 'Very high capital and operating costs. Extreme operating conditions require special materials. High energy requirement. Corrosion issues with salts. Economic mainly for high-value hazardous waste destruction, not bulk wastewater.',
     status: 'Mature but niche technology for specific applications.',
     references: ['General Atomics', 'US Department of Defense programs', 'Scientific literature on SCWO'],
-    images: ['/Photos/Supercritical Water Oxidation/Picture12.png', '/Photos/Supercritical Water Oxidation/Picture13.png'],
+    images: ['/Photos/Supercritical Water Oxidation/Picture57.png', '/Photos/Supercritical Water Oxidation/Picture58.jpg', '/Photos/Supercritical Water Oxidation/Picture59.png', '/Photos/Supercritical Water Oxidation/Picture60.png'],
   },
   {
     id: 25,
@@ -399,7 +399,7 @@ export const technologies: Technology[] = [
     limitations: 'Requires holistic redesign of WWTP. High initial investment. Some technologies (thermal hydrolysis) add complexity. Not all sites suitable - depends on wastewater characteristics and plant size.',
     status: 'Proven concept with operating examples. Becoming best practice in progressive jurisdictions.',
     references: ['Danish water utilities (BIOFOS, Aarhus Vand)', 'Water Environment Research Foundation', 'IWA energy-positive WWTP case studies'],
-    images: ['/Photos/Energy-Positive Wastewater Treatment/Picture12.png', '/Photos/Energy-Positive Wastewater Treatment/Picture13.png'],
+    images: ['/Photos/Energy-Positive Wastewater Treatment/Picture61.jpg'],
   },
   {
     id: 26,
@@ -414,7 +414,7 @@ export const technologies: Technology[] = [
     limitations: 'Requires clear water - suspended solids and turbidity reduce effectiveness. No residual disinfection in distribution system. Fouling of quartz sleeves requires cleaning. Energy consumption. Does not remove dissolved contaminants (only disinfects).',
     status: 'Mature proven technology. Industry standard for tertiary disinfection.',
     references: ['Xylem/Wedeco', 'Trojan Technologies', 'Danish UV equipment manufacturers', 'US EPA UV Disinfection Guidance'],
-    images: ['/Photos/UV System/Picture12.png', '/Photos/UV System/Picture13.png'],
+    images: ['/Photos/UV System/Picture62.png', '/Photos/UV System/Picture63.jpg'],
   },
   {
     id: 27,
@@ -429,7 +429,7 @@ export const technologies: Technology[] = [
     limitations: 'Screen blinding with oily or sticky solids. Regular maintenance of spray nozzles and bearings. Pre-screening of large objects required. Not effective for dissolved contaminants.',
     status: 'Mature commercial technology.',
     references: ['BOKELA (Germany)', 'Hydrotech (Veolia)', 'ANDRITZ', 'French water treatment equipment manufacturers'],
-    images: ['/Photos/Rotary drum/Picture12.png', '/Photos/Rotary drum/Picture13.png'],
+    images: ['/Photos/Rotary drum/Picture65.jpg', '/Photos/Rotary drum/Picture64.png'],
   },
   // Smart Monitoring
   {
@@ -445,7 +445,7 @@ export const technologies: Technology[] = [
     limitations: 'Cloud cover limits optical observation. Algorithms need calibration with in-situ data. Limited penetration depth in turbid water. Cannot measure all parameters (no nutrients, pathogens). Temporal resolution lower than in-situ sensors.',
     status: 'Operational technology with growing adoption as satellite data becomes freely available.',
     references: ['DHI GRAS (Denmark)', 'European Space Agency', 'Copernicus program', 'NASA', 'Planet Labs'],
-    images: ['/Photos/Remote Sensing & Earth Observation/Picture12.png', '/Photos/Remote Sensing & Earth Observation/Picture13.png'],
+    images: ['/Photos/Rotary drum/Picture64.png', '/Photos/Rotary drum/Picture65.jpg'],
   },
   {
     id: 29,
@@ -460,7 +460,7 @@ export const technologies: Technology[] = [
     limitations: 'Sensor drift requires regular calibration. Biofouling in natural waters. Cost increases with number of parameters. Some parameters (like BOD, COD) cannot be measured directly - only proxies. Maintenance requirements in harsh environments.',
     status: 'Mature commercial technology. Industry standard for water quality monitoring networks.',
     references: ['YSI/Xylem (USA/UK)', 'Hach (UK)', 'Aquatic Informatics', 'In-Situ Inc.'],
-    images: ['/Photos/Multi parameter Water Quality/Picture12.png', '/Photos/Multi parameter Water Quality/Picture13.png'],
+    images: ['/Photos/Multi parameter Water Quality/Picture68.jpg', '/Photos/Multi parameter Water Quality/Picture69.jpg'],
   },
   {
     id: 30,
@@ -475,7 +475,7 @@ export const technologies: Technology[] = [
     limitations: 'Requires extensive historical data for training. Data quality critical - garbage in, garbage out. Some operators hesitant to trust AI control. Cybersecurity concerns with cloud connectivity. Subscription costs for cloud services.',
     status: 'Rapidly growing technology. Transition from pilot to mainstream adoption.',
     references: ['DHI (Denmark)', 'Envirosuite', 'SUEZ AQUADVANCED', 'Xylem Applied Water Systems', 'Nereda (Royal HaskoningDHV)'],
-    images: ['/Photos/AI-Driven Cloud/Picture12.png', '/Photos/AI-Driven Cloud/Picture13.png'],
+    images: ['/Photos/AI-Driven Cloud/Picture70.jpg', '/Photos/AI-Driven Cloud/Picture71.jpg'],
   },
   {
     id: 31,
@@ -490,7 +490,7 @@ export const technologies: Technology[] = [
     limitations: 'Requires reliable sensors and maintenance. Control algorithm tuning needs expertise. Initial investment in VFDs and sensors. Not all plants suitable if equipment incompatible.',
     status: 'Proven technology. Best practice for energy efficiency.',
     references: ['Danish water sector', 'Grundfos (Denmark)', 'Siemens', 'Rockwell Automation', 'WEF energy management guidelines'],
-    images: ['/Photos/Energy-Efficient Smart/Picture12.png', '/Photos/Energy-Efficient Smart/Picture13.png'],
+    images: ['/Photos/Energy-Efficient Smart/Picture72.png'],
   },
   {
     id: 32,
@@ -505,7 +505,7 @@ export const technologies: Technology[] = [
     limitations: 'High number of sensors needed for coverage. Battery life and replacement for wireless sensors. Communication network costs and reliability. Data management and cybersecurity challenges. High initial investment.',
     status: 'Active area of innovation and deployment. Accelerating adoption.',
     references: ['Grundfos (Denmark)', 'Kamstrup (Denmark)', 'Siemens', 'Sensus/Xylem', 'Danish smart water grids'],
-    images: ['/Photos/IoT Monitoring for Real-Time Water Network-/Picture12.png', '/Photos/IoT Monitoring for Real-Time Water Network-/Picture13.png'],
+    images: ['/Photos/IoT Monitoring for Real-Time Water Network-/Picture73.jpg'],
   },
   {
     id: 33,
@@ -520,7 +520,7 @@ export const technologies: Technology[] = [
     limitations: 'Sensor cost relatively high. Calibration and maintenance requirements. Limited commercial suppliers. Not yet regulatory requirement in most places. Interpretation requires process expertise.',
     status: 'Emerging operational technology transitioning from research.',
     references: ['DTU Environment (Denmark)', 'Unisense (Denmark)', 'Scientific literature on N2O from WWTPs', 'GWRC research'],
-    images: ['/Photos/N2O Sensors- Unisense; Denmark/Picture12.png', '/Photos/N2O Sensors- Unisense; Denmark/Picture13.png'],
+    images: ['/Photos/N2O Sensors- Unisense; Denmark/Picture74.png'],
   },
   {
     id: 34,
@@ -535,7 +535,7 @@ export const technologies: Technology[] = [
     limitations: 'Sensor fouling in sewers requires regular cleaning. H2S variability makes grab sampling inadequate - continuous monitoring essential. Initial cost and ongoing calibration. Telemetry and power requirements.',
     status: 'Established commercial technology with expanding adoption.',
     references: ['Unisense (Denmark)', 'OdaLog', 'Scientific literature on sewer sulfide control'],
-    images: ['/Photos/H2S Sensor- SulfiLogger; Denmark/Picture12.png', '/Photos/H2S Sensor- SulfiLogger; Denmark/Picture13.png'],
+    images: ['/Photos/H2S Sensor- SulfiLogger; Denmark/Picture76.jpg', '/Photos/H2S Sensor- SulfiLogger; Denmark/Picture75.png'],
   },
   {
     id: 35,
@@ -550,7 +550,7 @@ export const technologies: Technology[] = [
     limitations: 'Foam or heavy rain can interfere with measurement. Limited range (typically <15m). Requires mounting structure and power. Calibration needed for sludge types. Some dense sludges may not reflect well.',
     status: 'Mature commercial technology.',
     references: ['Chinese sensor manufacturers', 'Endress+Hauser', 'Siemens', 'ABB'],
-    images: ['/Photos/Ultrasonic Sludge Level/Picture12.png', '/Photos/Ultrasonic Sludge Level/Picture13.png'],
+    images: ['/Photos/Ultrasonic Sludge Level/Picture78.jpg', '/Photos/Ultrasonic Sludge Level/Picture77.png'],
   },
   {
     id: 36,
@@ -565,7 +565,7 @@ export const technologies: Technology[] = [
     limitations: 'Calibration with grab samples required. Fouling of optical sensors needs cleaning. Sensor drift over time. Air bubbles and fiber content can interfere. Not all sludge types have linear correlation.',
     status: 'Established technology with improving reliability and affordability.',
     references: ['Hach (Solitax)', 'Endress+Hauser (Turbimax)', 'Chinese manufacturers', 'Yokogawa'],
-    images: ['/Photos/Sludge Concentration Sensor- Tengine; China/Picture12.png', '/Photos/Sludge Concentration Sensor- Tengine; China/Picture13.png'],
+    images: ['/Photos/Sludge Concentration Sensor- Tengine; China/Picture79.jpg', '/Photos/Sludge Concentration Sensor- Tengine; China/Picture80.png'],
   },
   // Sludge/Solid Waste Treatment
   {
@@ -581,7 +581,7 @@ export const technologies: Technology[] = [
     limitations: 'Large land area required. Long retention time (1-5 years). Performance affected by climate (reduced in cold/wet). Not suitable for large plants. Periodic harvesting required. May attract pests.',
     status: 'Mature technology for niche applications.',
     references: ['Danish EPA', 'Sludge Treatment Reed Beds Association', 'Scientific literature from Aarhus University'],
-    images: ['/Photos/Reed Beds- Aarhusvand; Denmark/Picture12.png', '/Photos/Reed Beds- Aarhusvand; Denmark/Picture13.png'],
+    images: ['/Photos/Reed Beds- Aarhusvand; Denmark/Picture82.jpg', '/Photos/Reed Beds- Aarhusvand; Denmark/Picture81.png'],
   },
   {
     id: 38,
@@ -596,7 +596,7 @@ export const technologies: Technology[] = [
     limitations: 'High capital and operational costs. Energy intensive (though offset by increased biogas). Complex operation requiring skilled staff. Economical mainly for large plants (>100,000 PE). Odor management needed.',
     status: 'Proven commercial technology for large-scale applications.',
     references: ['Cambi (Norway)', 'Veolia (former US Filter/Zimpro)', 'Scientific literature on THP'],
-    images: ['/Photos/High Temperature & Pressure with catalyst technology-Suez; Denmark/Picture12.png', '/Photos/High Temperature & Pressure with catalyst technology-Suez; Denmark/Picture13.png'],
+    images: ['/Photos/High Temperature & Pressure with catalyst technology-Suez; Denmark/Picture83.jpg', '/Photos/High Temperature & Pressure with catalyst technology-Suez; Denmark/Picture84.png'],
   },
   {
     id: 39,
@@ -611,7 +611,7 @@ export const technologies: Technology[] = [
     limitations: 'Very high capital cost. Complex operation. Requires minimum scale (typically >20,000 PE). Off-gas treatment needed. Biochar market development still evolving. Not economic for small plants.',
     status: 'Commercial technology for progressive large plants. Growing sector.',
     references: ['TCCR (Denmark)', 'Pyreg (Germany)', 'EnergyTech (Denmark)', 'Scientific literature on sludge pyrolysis'],
-    images: ['/Photos/Steam-drying and pyrolysis technology/Picture12.png', '/Photos/Steam-drying and pyrolysis technology/Picture13.png'],
+    images: ['/Photos/Steam-drying and pyrolysis technology/Picture85.png'],
   },
   {
     id: 40,
@@ -626,7 +626,7 @@ export const technologies: Technology[] = [
     limitations: 'Does not remove dissolved or colloidal matter. Requires pressure head or pumping. Wear from abrasive solids. May not meet primary treatment regulations alone. Energy consumption higher than gravity settling per m³.',
     status: 'Established niche technology for specific applications.',
     references: ['Krebs (France)', 'Weir Minerals', 'Scientific literature on hydrocyclones'],
-    images: ['/Photos/Cyclones Sludge Settler- Suez; Denmark/Picture12.png', '/Photos/Cyclones Sludge Settler- Suez; Denmark/Picture13.png'],
+    images: ['/Photos/Cyclones Sludge Settler- Suez; Denmark/Picture86.png', '/Photos/Cyclones Sludge Settler- Suez; Denmark/Picture87.png'],
   },
   {
     id: 41,
@@ -641,7 +641,7 @@ export const technologies: Technology[] = [
     limitations: 'Initial investment in sensors and bins. Battery replacement/maintenance for sensors. Connectivity challenges in some areas. Cultural adoption challenges in some communities. ROI depends on collection costs.',
     status: 'Growing commercial market. Maturing technology.',
     references: ['Danish waste management companies', 'Enevo', 'Bigbelly', 'Nordsense', 'Sensoneo'],
-    images: ['/Photos/Smart Waste Management Solution- Nordsense; Denmark/Picture12.png', '/Photos/Smart Waste Management Solution- Nordsense; Denmark/Picture13.png'],
+    images: ['/Photos/Smart Waste Management Solution- Nordsense; Denmark/Picture89.jpg', '/Photos/Smart Waste Management Solution- Nordsense; Denmark/Picture88.png'],
   },
   {
     id: 42,
@@ -656,7 +656,7 @@ export const technologies: Technology[] = [
     limitations: 'Requires proper feedstock balance (carbon/nitrogen ratio). Some maintenance and monitoring needed. Odor management critical. Not suitable for all waste types (meat, dairy limited). Capital cost may be barrier for small installations.',
     status: 'Commercial technology with established market.',
     references: ['Danish organic waste management sector', 'Various Scandinavian manufacturers'],
-    images: ['/Photos/Ecogi System- Ecogi; Denmark/Picture12.png', '/Photos/Ecogi System- Ecogi; Denmark/Picture13.png'],
+    images: ['/Photos/Ecogi System- Ecogi; Denmark/Picture90.png', '/Photos/Ecogi System- Ecogi; Denmark/Picture91.png'],
   },
   {
     id: 43,
@@ -671,7 +671,7 @@ export const technologies: Technology[] = [
     limitations: 'High capital investment. Requires source separation cooperation from residents. Some materials difficult to recycle economically. Market fluctuations affect material values. Residual waste still requires disposal.',
     status: 'Mature and continuously improving technology. Best practice.',
     references: ['Danish waste sector', 'TOMRA Sorting', 'European Environment Agency', 'Waste management industry publications'],
-    images: ['/Photos/Solid waste Recycling/Picture12.png', '/Photos/Solid waste Recycling/Picture13.png'],
+    images: ['/Photos/Solid waste Recycling/Picture92.jpg', '/Photos/Solid waste Recycling/Picture93.jpg'],
   },
   {
     id: 44,
@@ -686,7 +686,7 @@ export const technologies: Technology[] = [
     limitations: 'High initial investment in vision systems and robotics. Requires conveyor system modification. Performance affected by highly contaminated or wet waste. Maintenance of robots and cameras. ROI depends on material values and labor costs.',
     status: 'Commercial technology with expanding market.',
     references: ['ZenRobotics (Finland)', 'Bollegraaf (Netherlands)', 'Machinex (Canada)', 'AMP Robotics (USA)'],
-    images: ['/Photos/New folder/Picture12.png', '/Photos/New folder/Picture13.png'],
+    images: ['/Photos/Azortum solid waste sorting/Picture1.png', '/Photos/Azortum solid waste sorting/Picture2.png'],
   },
   {
     id: 45,
@@ -701,6 +701,6 @@ export const technologies: Technology[] = [
     limitations: 'Requires minimum landfill gas production (typically >300 scfm). Gas composition variability affects performance. RNG markets not developed everywhere. Pipeline injection requires utility agreements. Siloxane removal critical for equipment protection.',
     status: 'Proven commercial technology. Market growing rapidly with renewable energy incentives.',
     references: ['Waga Energy (France/USA)', 'Greenlane Renewables', 'Guild Associates', 'US EPA LMOP program'],
-    images: ['/Photos/New folder/Picture12.png', '/Photos/New folder/Picture13.png'],
+    images: ['/Photos/WAGABOX® technology/Picture3.jpg', '/Photos/WAGABOX® technology/Picture4.png'],
   },
 ];

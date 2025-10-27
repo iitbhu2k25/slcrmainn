@@ -12,9 +12,9 @@ export default function TechnologyCard({ technology }: TechnologyCardProps) {
   const router = useRouter();
 
   const categoryColors: Record<string, string> = {
-    decentralized: 'bg-primary-100 text-primary-700 border-primary-200',
+    decentralized: 'bg-red-100 text-red-700 border-red-200',
     'stp-improvement': 'bg-green-100 text-green-700 border-green-200',
-    'smart-monitoring': 'bg-secondary-100 text-secondary-700 border-secondary-200',
+    'smart-monitoring': 'bg-blue-100 text-blue-700 border-blue-200',
     'sludge-treatment': 'bg-purple-100 text-purple-700 border-purple-200',
   };
 
