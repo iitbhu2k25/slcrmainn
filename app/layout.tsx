@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Navbar from "@/components/applayout/Navbar";
+import Footer from "@/components/applayout/Footer";
 import { EB_Garamond } from "next/font/google";
 import "./globals.css";
 
