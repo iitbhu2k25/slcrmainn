@@ -235,19 +235,7 @@ const ResearchShowcase: React.FC<ResearchShowcaseProps> = ({ technology }) => {
                         <span className="font-semibold text-gray-500 min-w-[2.5rem]">
                           [{i + 1}]
                         </span>
-                        {ref?.url ? (
-                          <a
-                            href={ref.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-blue-700 hover:text-blue-900 hover:underline flex items-center gap-1.5 transition-colors"
-                          >
-                            {ref.name}
-                            <ExternalLink size={14} />
-                          </a>
-                        ) : (
-                          <span>{ref.name}</span>
-                        )}
+                        
                       </li>
                     ))}
                   </ol>

@@ -21,7 +21,7 @@ export default function TechnologyDetailPage() {
     <main className="min-h-screen bg-white">
       
       {/* Header Section - Academic Style */}
-      <div className="bg-slate-900 text-white py-16 px-6 border-b-4 border-blue-600">
+      <div className="bg-slate-900 text-white py-10 px-6 border-b-4 border-blue-600">
         <div className="max-w-6xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6 leading-tight">
             {technology.name}
@@ -52,7 +52,7 @@ export default function TechnologyDetailPage() {
       </div>
 
       {/* Main Content Layout */}
-      <div className="max-w-6xl mx-auto py-12 px-6">
+      <div className="max-w-[85%] mx-auto py-10 px-4">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-10">
           
           {/* Main Content - 3/4 Width */}

@@ -38,7 +38,7 @@ export const technologies: Technology[] = [
     limitations: 'Requires regular monitoring and maintenance. To remove carbon from water bodies, microbial culturing needs to be done.',
     status: 'Communication is under progress.',
     references: ['Eco Island', 'Floating Island International Inc.'],
-    images: ['/Photos/floating-wetland.jpg'],
+    images: ['/Photos/Floating Wetlands-/Picture1.jpg'],
   },
   {
     id: 2,
