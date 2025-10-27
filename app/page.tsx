@@ -1,10 +1,10 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import HeroSection from "@/components/Hero";
+import HeroSection from "@/components/categories";
 import Projects from "./projects/page";
 import ImportantWebsites from "@/components/ImportantWebsites";
-import Hero from "@/components/Hero";
+import Hero from "@/components/categories";
 import ImportantLinks from "@/components/ImportantLinks";
 import OurProjects from "@/components/OurProjects";
 import Partnership from "@/components/Partnership";

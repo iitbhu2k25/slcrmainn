@@ -1,15 +1,17 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import { MapPin, ExternalLink } from 'lucide-react';
 import { Technology } from '@/lib/data';
 
 interface TechnologyCardProps {
   technology: Technology;
-
 }
 
-export default function TechnologyCard({ technology}: TechnologyCardProps) {
-  const categoryColors = {
+export default function TechnologyCard({ technology }: TechnologyCardProps) {
+  const router = useRouter();
+
+  const categoryColors: Record<string, string> = {
     decentralized: 'bg-primary-100 text-primary-700 border-primary-200',
     'stp-improvement': 'bg-green-100 text-green-700 border-green-200',
     'smart-monitoring': 'bg-secondary-100 text-secondary-700 border-secondary-200',
@@ -18,8 +20,8 @@ export default function TechnologyCard({ technology}: TechnologyCardProps) {
 
   return (
     <button
-    
-      className="card card-hover p-6 text-left w-full group"
+      onClick={() => router.push(`/technology/${technology.id}`)}
+      className="card card-hover p-6 text-left w-full group transition-transform hover:-translate-y-1 hover:shadow-lg rounded-xl border border-gray-100 bg-white"
     >
       <div className="flex items-start justify-between mb-4">
         <div className="flex-1">
@@ -36,7 +38,7 @@ export default function TechnologyCard({ technology}: TechnologyCardProps) {
 
       <span
         className={`inline-block px-3 py-1 rounded-full text-xs font-semibold border ${
-          categoryColors[technology.category]
+          categoryColors[technology.category] || 'bg-gray-100 text-gray-700 border-gray-200'
         }`}
       >
         {technology.category

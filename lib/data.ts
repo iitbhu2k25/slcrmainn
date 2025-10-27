@@ -11,6 +11,8 @@ export interface Technology {
   limitations?: string;
   status?: string;
   references?: string[];
+  authors?: string[];
+  institution?: string;
   images?: string[];
 }
 
@@ -36,6 +38,7 @@ export const technologies: Technology[] = [
     limitations: 'Requires regular monitoring and maintenance. To remove carbon from water bodies, microbial culturing needs to be done.',
     status: 'Communication is under progress.',
     references: ['Eco Island', 'Floating Island International Inc.'],
+    images: ['/Photos/floating-wetland.jpg'],
   },
   {
     id: 2,

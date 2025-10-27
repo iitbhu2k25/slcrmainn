@@ -65,7 +65,7 @@ export default function Research() {
                 description={category.description}
                 count={getCategoryCount(category.key)}
                 color={category.color}
-                onClick={() => router.push(`/technology/${category.key}`)}
+                onClick={() => router.push(`/category/${category.key}`)}
               />
             ))}
           </div>

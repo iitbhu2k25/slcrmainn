@@ -39,13 +39,16 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-wrap gap-4 justify-center">
-          
-          <a
-            href="#categories"
+
+          <button
+            onClick={() => {
+              const element = document.getElementById("categories");
+              element?.scrollIntoView({ behavior: "smooth" });
+            }}
             className="px-8 py-4 bg-white text-primary-600 rounded-full font-semibold shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 border-2 border-primary-600"
           >
             View Categories
-          </a>
+          </button>
         </div>
 
         {/* Stats Section */}
