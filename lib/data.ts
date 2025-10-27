@@ -10,7 +10,9 @@ export interface Technology {
   fieldApplication?: string;
   limitations?: string;
   status?: string;
-  references?: string[];
+  references?: {
+    [key: string]: string;  // key = name, value = link (URL)
+  };
   images?: string[];
   institution?: string;
   authors?: string[];
@@ -37,7 +39,10 @@ export const technologies: Technology[] = [
     fieldApplication: 'Has been applied successfully in Denmark.',
     limitations: 'Requires regular monitoring and maintenance. To remove carbon from water bodies, microbial culturing needs to be done.',
     status: 'Communication is under progress.',
-    references: ['Eco Island', 'Floating Island International Inc.'],
+    references: {
+      "Eco Island": "https://www.ecoisland.dk/services/",
+      "Floating Island International Inc.": "https://www.floatingislandinternational.com/contact.html"
+    },
     images: ['/Photos/Floating Wetlands-/Picture1.jpg', '/Photos/Floating Wetlands-/Picture2.png'],
   },
   {
@@ -52,7 +57,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Lab testing has been conducted with successful results.',
     limitations: 'Takes longer treatment time compared to conventional wastewater technologies.',
     status: 'Initial presentation conducted. Second phase meeting is in progress.',
-    references: ['Pinakin Technology Solutions Pvt Ltd'],
+    references: {'Pinakin Technology Solutions Pvt Ltd':"https://pinakin.co.in/"},
     images: ['/Photos/Photosynthesis Based/Picture3.jpg', '/Photos/Photosynthesis Based/Picture5.png'],
   },
   {
@@ -67,7 +72,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'SBT plant has been developed in IIT Bombay and has been implemented successfully in Bengaluru and Mumbai.',
     limitations: 'SBT type wastewater treatment plants require high land area of around 2.5 m²/ m³ of wastewater treatment.',
     status: 'Communication is under progress.',
-    references: ['https://www.visionearthcare.com/technology/sbt'],
+    references: {'https://www.visionearthcare.com/technology/sbt':"https://www.visionearthcare.com/technology/sbt"},
     images: ['/Photos/Soil biotechnology (SBT)/Picture6.jpg', '/Photos/Soil biotechnology (SBT)/Picture7.png', '/Photos/Soil biotechnology (SBT)/Picture8.jpg'],
   },
   {
@@ -82,7 +87,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Successfully implemented at CSIR-NCL, Mumbai University, Raj Bhawan, various locations in Mumbai, Thane, Nashik, Panvel, Allahabad, and Matheran. Used for lake rejuvenation projects.',
     limitations: 'Requires approximately 35 sq.m. area for 20 m³/day treatment capacity. Treated water primarily suitable for non-potable uses like gardens, fountains, and irrigation.',
     status: 'Technology patented in India, Europe, and Australia. Widely commercialized and implemented across India.',
-    references: ['CSIR-NEERI Nagpur', 'https://www.neeri.res.in', 'Alaknanda Technologies Pvt Ltd', 'Ministry of Drinking Water and Sanitation'],
+    references: {'NEERI Nagpur':"https://www.neeri.res.in/contents/banner_details/phytorid-wastewater-treatment-technology/5b193f6eaacd7googtrans(en%7Cen)#googtrans(en|en)"},
     images: ['/Photos/Phytorid/Picture9.png', '/Photos/Phytorid/Picture10.png'],
   },
   {
