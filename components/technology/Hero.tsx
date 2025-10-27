@@ -4,8 +4,10 @@ import { Droplets, Leaf, Microscope, Settings } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden px-4 py-20">
-      {/* Animated background elements */}
+    <section
+      className="relative min-h-[70vh] flex items-center justify-center overflow-hidden px-4 py-20 bg-cover bg-center bg-no-repeat brightness-75"
+      style={{ backgroundImage: "url('/background_water.jpg')" }}
+    >
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary-300/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary-300/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
