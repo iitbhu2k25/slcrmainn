@@ -135,25 +135,29 @@ export default function TechnologyModal({ technology, onClose }: TechnologyModal
                   <h3 className="text-lg font-bold text-gray-900">References</h3>
                 </div>
                 <ul className="space-y-2 ml-7">
-                  {technology.references.map((ref, index) => (
-                    <li key={index}>
-                      {ref.startsWith('http') ? (
+                  {technology.references.map((ref, index) => {
+                    const [key, value] = Object.entries(ref)[0]; // ✅ extract key/value
+
+                    return (
+                      <li key={index} className="flex gap-3 text-sm">
+                        <span className="font-mono text-gray-500 min-w-[2rem]">
+                          [{index + 1}]
+                        </span>
                         <a
-                          href={ref}
+                          href={value}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-primary-600 hover:text-primary-700 hover:underline break-all"
+                          className="text-blue-600 hover:underline leading-relaxed break-all"
                         >
-                          {ref}
+                          {key}
                         </a>
-                      ) : (
-                        <span className="text-gray-700">{ref}</span>
-                      )}
-                    </li>
-                  ))}
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             )}
+
           </div>
         </div>
       </div>

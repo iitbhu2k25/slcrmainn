@@ -11,7 +11,7 @@ export interface Technology {
   limitations?: string;
   status?: string;
   references?: [{
-    [key: string]: string; 
+    [key: string]: string;
   }];
   images?: string[];
   institution?: string;
@@ -38,6 +38,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Has been applied successfully in Denmark.',
     limitations: 'Requires regular monitoring and maintenance. To remove carbon from water bodies, microbial culturing needs to be done.',
     status: 'Communication is under progress.',
+    references: [{ "Eco Island": "https://www.ecoisland.dk/services/", "Floating Island International Inc": "https://www.floatingislandinternational.com/contact.html" }],
     images: ['/Photos/Floating Wetlands-/Picture1.jpg', '/Photos/Floating Wetlands-/Picture2.png'],
   },
   {
@@ -67,7 +68,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'SBT plant has been developed in IIT Bombay and has been implemented successfully in Bengaluru and Mumbai.',
     limitations: 'SBT type wastewater treatment plants require high land area of around 2.5 m²/m³ of wastewater treatment.',
     status: 'Communication is under progress.',
-    references: [{ 'https://www.visionearthcare.com/technology/sbt': "https://www.visionearthcare.com/technology/sbt" }],
+    references: [{ 'visionearthcare': "https://www.visionearthcare.com/technology/sbt" }],
     images: ['/Photos/Soil biotechnology (SBT)/Picture6.jpg', '/Photos/Soil biotechnology (SBT)/Picture7.png', '/Photos/Soil biotechnology (SBT)/Picture8.jpg'],
   },
   {
@@ -82,7 +83,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Has been successfully implemented in various places such as in Mumbai and Buldhana.',
     limitations: 'Initial cost and time taken for complete cleaning of water body is high.',
     status: 'Communication is in progress.',
-    references: [{ 'NEERI Nagpur': "https://www.neeri.res.in/contents/banner_details/phytorid-wastewater-treatment-technology/5b193f6eaacd7googtrans(en%7Cen)#googtrans(en|en)" }],
+    references: [{ 'NEERI Nagpur': "https://www.neeri.res.in/contents/banner_details/phytorid-wastewater-treatment-technology/5b193f6eaacd7googtrans(en%7Cen)" }],
     images: ['/Photos/Phytorid/Picture9.png', '/Photos/Phytorid/Picture10.png'],
   },
   {
@@ -97,7 +98,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Successfully implemented and got results for mining industry in India.',
     limitations: 'Less efficient for domestic sewage having less organics (BOD < 500 mg/L).',
     status: 'Initial presentation conducted by company. Second phase meeting is in progress.',
-    // references: ['Various Indian research institutions'],
+    references: [{ "Pinakin Technologies Company": "https://pinakin.co.in/" }],
     images: ['/Photos/Freeze Technology/Picture11.png', '/Photos/Freeze Technology/Picture12.png'],
   },
   {
@@ -112,7 +113,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Used in agriculture to boost plant growth, aquaculture to improve fish health, and wastewater to enhance water quality.',
     limitations: 'High initial investment needed.',
     status: 'Initial response received. Presentation was scheduled; no response.',
-    // references: ['Moleaer Inc.', 'NICO Nanobubble India Co.', 'Scientific literature in Water Research, Science of the Total Environment, ACS ES&T Engineering'],
+    references: [{ "http://www.moleaer.com/": "http://www.moleaer.com/" }],
     images: ['/Photos/Nano-Bubble Generators/Picture13.jpg', '/Photos/Nano-Bubble Generators/Picture14.jpg'],
   },
   {
@@ -127,7 +128,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Similar decentralized solutions deployed across 50+ countries including India by various providers.',
     limitations: 'Requires regular service visits for consistent long-term functionality.',
     status: 'Communication is under process.',
-    // references: ['Danish water technology companies'],
+    references: [{ "http://www.biokube.dk/": "http://www.biokube.dk/" }],
     images: ['/Photos/Watopi- BioKube, Denmark/Picture15.png', '/Photos/Watopi- BioKube, Denmark/Picture16.jpg', '/Photos/Watopi- BioKube, Denmark/Picture17.jpg'],
   },
   {
@@ -142,7 +143,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Pilot-based study on USA swine wastewater showed maximum 93% COD removal.',
     limitations: 'Not very effective for less polluted wastewater such as domestic sewage (BOD < 500 mg/L).',
     status: 'Initial response received. Presentation was scheduled; no response.',
-    // references: ['Various US universities and research institutions', 'Scientific literature on bioelectrochemical systems'],
+    references: [{ "Aquacycl company, USA": "https://aquacycl.com/services/carbon-removal/", "Hsu et al., 2017": "https://aquacycl.com/wp-content/uploads/2024/07/2017_ECS-Trans.-2017-Hsu-19-29.pdf", "https://www.youtube.com/watch?v=IxsG8G0YTEE": "https://www.youtube.com/watch?v=IxsG8G0YTEE" }],
     images: ['/Photos/Microbial Fuel Cell- Aquacyl; USA/Picture18.png', '/Photos/Microbial Fuel Cell- Aquacyl; USA/Picture19.jpg'],
   },
   {
@@ -157,7 +158,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'On-field application performed at Hindon Canal, Ghaziabad, Uttar Pradesh.',
     limitations: 'Maximum treatment capacity is 150 L/Hr.',
     status: 'Response of SLCR email is awaited.',
-    // references: ['Singapore water technology sector'],
+    references: [{ "http://h2omantra.com/": "http://h2omantra.com/", "https://www.youtube.com/watch?v=fAXTCBhkWGc": "https://www.youtube.com/watch?v=fAXTCBhkWGc", "https://youtu.be/RTfi1cFEzT8?si=LZjQMbP2_6L10v_6": "https://youtu.be/RTfi1cFEzT8?si=LZjQMbP2_6L10v_6" }],
     images: ['/Photos/Water Mantra-h2Omantra; Singapore/Picture20.png', '/Photos/Water Mantra-h2Omantra; Singapore/Picture21.png', '/Photos/Water Mantra-h2Omantra; Singapore/Picture22.png'],
   },
   {
@@ -172,7 +173,7 @@ export const technologies: Technology[] = [
     fieldApplication: ' Onfield application performed at Ramnagar, Bhopal, MadhyaPradesh.',
     limitations: 'Maximum treatment capacity is 50L/Hr.',
     status: 'Mail has been sent. At present waiting for their reply.',
-    // references: ['Singapore water technology sector'],
+    references: [{ "http://h2omantra.com/": "http://h2omantra.com/", "https://www.youtube.com/watch?v=W5cNmFTn5Rw": "https://www.youtube.com/watch?v=W5cNmFTn5Rw" }],
     images: ['/Photos/Water Mantra-h2Omantra; Singapore/Picture20.png', '/Photos/Water Mantra-h2Omantra; Singapore/Picture21.png', '/Photos/Water Mantra-h2Omantra; Singapore/Picture22.png'],
   },
   {
@@ -187,7 +188,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Applied at some places in India.',
     limitations: 'Initial installation cost is very high.',
     status: 'Initial presentation conducted by Pinkain Technology, India. Second phase meeting is in progress.',
-    // references: ['Indian electrochemical technology providers', 'IIT research groups'],
+    references: [{ "Pinakin Technology Solutions Pvt Ltd": "https://pinakin.co.in/", "Technology- HPNow": "https://hpnow.com/technology/" }],
     images: ['/Photos/Electro Oxidation Technology; Pinakin/Picture23.jpg', '/Photos/Electro Oxidation Technology; Pinakin/Picture24.png', '/Photos/Electro Oxidation Technology; Pinakin/Picture25.png'],
   },
   {
@@ -202,7 +203,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Demonstrated at Evonik, Germany – integration with Xylem’s UV reactor for real-time contaminant removal.',
     limitations: 'Initial investment cost may be high for small facilities. The process is electricity-dependent and not ideal for areas with unreliable power.',
     status: 'No initial response received.',
-    // references: ['Danish Environmental Protection Agency', 'Nordic water technology providers'],
+    references: [{ "https://hpnow.com/technology/": "https://hpnow.com/technology/", "https://hpnow.com/introducing-hpgen-i-series/": "https://hpnow.com/introducing-hpgen-i-series/", "https://smartwatermagazine.com/news/hpnow/green-peroxide-generation-enables-safe-and-chemical-free-aop": "https://smartwatermagazine.com/news/hpnow/green-peroxide-generation-enables-safe-and-chemical-free-aop" }],
     images: ['/Photos/Onsite Oxidation- hpnow; Denmark/Picture26.jpg', '/Photos/Onsite Oxidation- hpnow; Denmark/Picture27.jpg'],
   },
   {
@@ -217,7 +218,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Has been implemented successfully in various pilot plant studies with good removal efficiency such as IIT Madras sewage treatment plant.',
     limitations: 'High-voltage operations require high safety protocols, trained personnel, and treatment cost. The process generates nitrate release into water after treatment.',
     status: 'No initial response received.',
-    // references: ['German research institutions', 'Fraunhofer Institute', 'Technical universities'],
+    references: [{ "https://fidtech.com/high-voltage-pulse-generators/": "https://fidtech.com/high-voltage-pulse-generators/" }],
     images: ['/Photos/Pulse Plasma- Fidtech; Germany/Picture28.png', '/Photos/Pulse Plasma- Fidtech; Germany/Picture29.png', '/Photos/Pulse Plasma- Fidtech; Germany/Picture30.jpg'],
   },
   {
@@ -232,7 +233,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Successfully implemented across various industrial sectors globally.',
     limitations: 'Primarily for industrial wastewater; requires careful pre-treatment for heavily polluted wastewater.',
     status: 'Communication is under progress.',
-    // references: ['Danish industry', 'GEA Process Engineering', 'European ZLD providers'],
+    references: [{ "Envotherm": "http://www.envotherm.dk/" }],
     images: ['/Photos/MVR Technology- Envotherm; Denmark/Picture31.png', '/Photos/MVR Technology- Envotherm; Denmark/Picture32.png'],
   },
   {
@@ -247,7 +248,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Has been successfully implemented in various places in India such as during Kumbh, Prayagraj.',
     limitations: 'Utilization of chemical polymer for binding the solids is a concern for discharging. The filter pores are not suitable for long run.',
     status: 'Communication is in progress.',
-    // references: ['Solmax International', 'TenCate Geosynthetics', 'Indian and Australian environmental engineering firms'],
+    references: [{ "Ocean Global": "https://oceangeosynthetics.com/geotubes-the-effective-solution-for-dewatering-sludge/", "Solamax": "https://www.solmax.com/me/en/blog/how-to-achieve-sustainable-dewatering-with-geotube", "https://www.geofabrics.co/sites/default/files/2024-07/GEOTUBE_Dewatering_Technology_APAC_0923_Web.pdf": "https://www.geofabrics.co/sites/default/files/2024-07/GEOTUBE_Dewatering_Technology_APAC_0923_Web.pdf" }],
     images: ['/Photos/Geotubes/Picture33.jpg', '/Photos/Geotubes/Picture34.png'],
   },
   {
@@ -262,7 +263,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Laguna Niguel Lake, USA had total initial phosphorus of ~270 µg/L which achieved >80% removal. Serpentine Lake, UK had initial phosphorus of ~0.3 mg/L which was reduced to 0.05 mg/L.',
     limitations: 'Treatment cost is comparatively higher than conventional biological processes. Only applicable for phosphorus and not for other nutrients or pollutants.',
     status: 'No initial response received.',
-    // references: ['Advanced Water Management Inc.', 'US EPA nutrient removal case studies'],
+    references: [{ "https://www.waterwarriorsinc.com/": "https://www.waterwarriorsinc.com/", "https://petwatersolutions.com/products/water-treatment-phoslock/": "https://petwatersolutions.com/products/water-treatment-phoslock/", "https://www.youtube.com/watch?v=8XlDY84WIP8": "https://www.youtube.com/watch?v=8XlDY84WIP8" }],
     images: ['/Photos/Poseidon Pellets/Picture35.jpg', '/Photos/Poseidon Pellets/Picture36.jpg', '/Photos/Poseidon Pellets/Picture37.jpg'],
   },
   {
@@ -277,7 +278,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Used extensively for municipal WWTP and Industrial wastewater.',
     limitations: 'Coagulants once used can’t be reused again. Coagulants may pose issue after the test',
     status: 'Negative response received.',
-    // references: ['Chinese water treatment industry', 'Major coagulant manufacturers in China', 'Research from Tsinghua, Tongji universities'],
+    references: [{ "Henan SECCO Company, China": "https://www.hnsecco.com/", "https://www.youtube.com/watch?v=H2-G9dMw4Lw": "https://www.youtube.com/watch?v=H2-G9dMw4Lw" }],
     images: ['/Photos/Coagulation/Picture38.png', '/Photos/Coagulation/Picture39.png'],
   },
   // STP Improvement
@@ -293,7 +294,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Used by leading companies like Xylem and Veolia for high-quality wastewater treatment. Xylem’s Sanitaire MBR and Veolia’s Biosep™ are established globally.',
     limitations: 'High initial capital costs due to membrane purchase and installation.',
     status: ' Veolia company made their presentation & Xylem company didn’t respond.',
-    // references: ['Suez Water Technologies', 'Evoqua', 'Membrane Bioreactor Industry Consortium', 'IWA MBR specialist group'],
+    references: [{ "https://www.veoliawatertech.com/en/products/biosep-neosep": "https://www.veoliawatertech.com/en/products/biosep-neosep", "https://www.xylem.com/en-us/brands/sanitaire/about-sanitaire/": "https://www.xylem.com/en-us/brands/sanitaire/about-sanitaire/" }],
     images: ['/Photos/Membrane Bioreactor/Picture40.png', '/Photos/Membrane Bioreactor/Picture41.jpg'],
   },
   {
@@ -308,6 +309,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'World’s largest Produced Water treatment plant using MBBR in Fredericia, Denmark. Successfully demonstrated in Banning, CA, USA pilot with aerobic-aerobic-anoxic- aerobic configuration.',
     limitations: 'Some insects, like sewage flies, mosquitoes and red worms, will be attracted to the biofilm and causing decrease in effectiveness of the system. • Manual monitoring is required to ensure the bacteria on the carriers is still alive.',
     status: 'Initial response is awaited.',
+    references: [{ "https://www.suez.com/en/denmark/references/danish-oil-pipe": "https://www.suez.com/en/denmark/references/danish-oil-pipe", "https://bio-blok.com/applications/wastewater-treatment-municipality": "https://bio-blok.com/applications/wastewater-treatment-municipality" }],
     images: ['/Photos/Membrane Bioreactor/Picture40.png', '/Photos/Membrane Bioreactor/Picture41.jpg'],
   },
   {
@@ -322,6 +324,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Applied successfully in Copenhagen, Denmark and other EU plants — 5-15 MLD scale.',
     limitations: 'Requires monitoring of biofilm thickness and carrier integrity. Operational complexity higher than conventional activated sludge.',
     status: 'Meeting held; follow up is being done by sending water quality data',
+    references: [{ "https://www.ovivowater.com/en/product/clearfas/": "https://www.ovivowater.com/en/product/clearfas/" }],
     images: ['/Photos/Integrated Fixed-film Activated Sludge/Picture46.png', '/Photos/Integrated Fixed-film Activated Sludge/Picture47.emf'],
   },
   {
@@ -336,6 +339,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Applied in wastewater treatment, food and beverage concentration, and pharmaceutical industries for efficient water separation.',
     limitations: 'Membrane performance can be affected by fouling; requires proper pre-treatment and maintenance.',
     status: 'Meeting held on on 6th June and further follow -up is under way..',
+    references: [{ "https://aquaporin.com/products/": "https://aquaporin.com/products/" }],
     images: ['/Photos/Membranes; Aquaporin/Picture48.png', '/Photos/Membranes; Aquaporin/Picture49.png', '/Photos/Membranes; Aquaporin/Picture50.png'],
   },
   {
@@ -350,6 +354,8 @@ export const technologies: Technology[] = [
     fieldApplication: 'Widely used in various industrial liquid filtration processes and municipal wastewater applications globally.',
     limitations: 'Higher initial capital cost than some conventional filtration methods.',
     status: 'Communication is under process',
+    references: [{ "Liq Tech International": "http://www.liqtech.com/" }],
+
     images: ['/Photos/Ceramic Membrane Filtration/Picture51.png'],
   },
   {
@@ -364,6 +370,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Applied successfully in Canadian municipality with obtained effluent (P< 0.05, NH3< 1 and BOD5< 10 mg/L) reaching standard.',
     limitations: 'The moving belt requires extra energy consumption & maintenance.',
     status: 'Initial response is awaited.',
+    references: [{ "Technology | Gross-Wen Technologies": "https://algae.com/technology", "https://algae.com/wp-content/uploads/2024/04/5-Municiapal-Pilot_Case-Study.pdf": "https://algae.com/wp-content/uploads/2024/04/5-Municiapal-Pilot_Case-Study.pdf" }],
     images: ['/Photos/Revolving Algal Biofilm System/Picture52.png', '/Photos/Revolving Algal Biofilm System/Picture53.png', '/Photos/Revolving Algal Biofilm System/Picture54.png'],
   },
   {
@@ -378,6 +385,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'More than 40 municipal applications are in the United States.',
     limitations: 'Requires very skilled manpower and continuous monitoring to operate.',
     status: 'Communication is under progress.',
+    references: [{ "Sci-Hub": "https://sci-hub.st/10.2175/193864700784545036", "https://www.epa.gov/sites/default/files/2019-02/documents/emerging-tech-wastewater-treatment-management.pdf": "https://www.epa.gov/sites/default/files/2019-02/documents/emerging-tech-wastewater-treatment-management.pdf" }],
     images: ['/Photos/Nicotinamide Adenine Dinucleotide/Picture55.png', '/Photos/Nicotinamide Adenine Dinucleotide/Picture56.png'],
   },
   {
@@ -392,6 +400,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Worked in collaboration with “OC San wastewater treatment company” and other US company for the treatment of emerging contaminants',
     limitations: 'Requires lot of energy, specialized equipment and safety measures during its operation.',
     status: 'No initial response came through mail.',
+    references: [{ "https://aquarden.com/superox-scwo/": "https://aquarden.com/superox-scwo/", "https://374water.com/technology/": "https://374water.com/technology/", "Supercritical Water Oxidation Project": "https://www.ocsan.gov/construction-project/supercritical-water-oxidation-project/" }],
     images: ['/Photos/Supercritical Water Oxidation/Picture57.png', '/Photos/Supercritical Water Oxidation/Picture58.jpg', '/Photos/Supercritical Water Oxidation/Picture59.png', '/Photos/Supercritical Water Oxidation/Picture60.png'],
   },
   {
@@ -406,6 +415,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Ejby Mølle is a fully operational, highly optimized plant in Denmark, serving as a benchmark for water management.',
     limitations: 'Represents a state-of-the-art facility; full replication requires significant investment and skilled operation.',
     status: 'Received initial response. Requested for presentation; response is awaited.',
+    references: [{ "VCSDenmark": "http://www.vcs.dk/", "Aarhus Vand": "http://www.aarhusvand.com/" }],
     images: ['/Photos/Energy-Positive Wastewater Treatment/Picture61.jpg'],
   },
   {
@@ -420,6 +430,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Has been applied in various countries like Canada, UK, USA.',
     limitations: 'Not suitable for highly turbid water.',
     status: 'Received initial response. Requested for presentation; response is awaited.',
+    references: [{ "Ultra Aqua": "https://ultraaqua.com/product/ultratox-series/?_gl=1*110abdh*_up*MQ..*_ga*NjQyOTc0MjQuMTc0ODUxNDQ5Mw..*_ga_FM5MZLCMJ4*czE3NDg1MTQ0OTMkbzEkZzEkdDE3NDg1MTQ1MTckajM2JGwwJGgw" }],
     images: ['/Photos/UV System/Picture62.png', '/Photos/UV System/Picture63.jpg'],
   },
   {
@@ -434,6 +445,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Used in JC France’s projects for sewage filtration, food processing, and textile industry effluent treatment.',
     limitations: 'Not effective for dissolved pollutants – only removes particulate matter. Requires regular maintenance to prevent clogging and ensuring effective filtration.',
     status: 'Response is awaited',
+    references: [{ "https://www.jcfranceindustrie.fr/en/rotary-drum-filter/": "https://www.jcfranceindustrie.fr/en/rotary-drum-filter/" }],
     images: ['/Photos/Rotary drum/Picture65.jpg', '/Photos/Rotary drum/Picture64.png'],
   },
   // Smart Monitoring
@@ -449,6 +461,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Used in national and international projects globally, including collaborations with the European Space Agency.',
     limitations: 'Requires expertise in data interpretation; dependent on satellite data availability and resolution. • Usually measures chlorophyll and turbidity of water bodies. Difficult to analyze other major parameters like BOD, COD, etc.',
     status: 'Operational technology with growing adoption as satellite data becomes freely available.',
+    references: [{ "DHI GRAS": "http://www.dhigras.com/" }],
     images: ['/Photos/Rotary drum/Picture64.png', '/Photos/Rotary drum/Picture65.jpg'],
   },
   {
@@ -463,22 +476,10 @@ export const technologies: Technology[] = [
     fieldApplication: 'Has been installed in UK with over 250 outstations monitoring water quality,level and weather.• Has been installed in Denmark and Philippines coastal area.',
     limitations: '+5% error in the determined parameters values and initial cost is high.',
     status: 'Initial response received. In the process of scheduling presentation.',
+    references: [{ "https://proteus-instruments.com/": "https://proteus-instruments.com/", "How the UK's largest real-time catchment monitoring network is leading the way": "https://proteus-instruments.com/2024/01/24/how-the-uks-largest-real-time-catchment-monitoring-network-is-leading-the-way/" }],
     images: ['/Photos/Multi parameter Water Quality/Picture68.jpg', '/Photos/Multi parameter Water Quality/Picture69.jpg'],
   },
-  {
-    id: 30,
-    name: 'AI-Driven Cloud Optimization for WWTPs',
-    country: 'Denmark',
-    category: 'smart-monitoring',
-    currentGap: 'Indian wastewater treatment plants face challenges in optimizing energy consumption, greenhouse gas emissions and adaptation to fluctuating loads.',
-    technology: 'Cloud-based digital platform for real-time monitoring, control, and forecasting of WWTP operations.',
-    novelty: 'Uses advanced algorithms, AI, and SCADA data (Supervisory Control and Data Acquisition) for predicting the response, reducing energy and GHG emissions by 15-30%.',
-    details: 'Applies to large-scale municipal WWTPs; optimizes aeration, manages nutrient removal, and adapts to influent variations.',
-    fieldApplication: 'Successfully implemented in Europe, and in WWTP in Italy',
-    limitations: 'Requires comprehensive SCADA data and initial setup/integration with existing plant systems.',
-    status: 'Received initial response. Requested for presentation; response is awaited.',
-    images: ['/Photos/AI-Driven Cloud/Picture70.jpg', '/Photos/AI-Driven Cloud/Picture71.jpg'],
-  },
+
   {
     id: 30,
     name: 'AI-Driven Cloud Optimization for WWTPs',
@@ -491,7 +492,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Successfully implemented at advanced WWTPs in Denmark, Italy, the Netherlands, the UK, and the USA. Demonstrated 15–25% energy and 10–20% GHG reduction with improved effluent stability. Applicable for Indian utilities seeking digital transformation in WWTP operations.',
     limitations: 'Requires reliable and comprehensive SCADA data integration. Data quality directly affects model accuracy. Initial setup, calibration, and operator training are required. Ongoing subscription costs and cybersecurity considerations apply.',
     status: 'Initial response received. Presentation requested; awaiting further communication.',
-    //references: ['DHI (Denmark)', 'BIOFOS (Denmark)', 'Envirosuite', 'SUEZ AQUADVANCED', 'Xylem Applied Water Systems'],
+    references: [{ "DHI": "http://www.dhi.com/", "BIOFOS": "https://en.biofos.dk/" }],
     images: ['/Photos/AI-Driven Cloud/Picture70.jpg', '/Photos/AI-Driven Cloud/Picture71.jpg']
   },
 
@@ -508,7 +509,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Extensively implemented in Denmark and other advanced water utilities worldwide. Applicable across municipal and industrial sectors in India, including ZLD/MLD facilities. Proven energy-saving performance in thousands of installations.',
     limitations: 'Requires proper sensor maintenance, system tuning, and compatibility with existing motor or pump setups. Initial investment in VFDs and control infrastructure.',
     status: 'Proven and mature technology. Communication with solution providers underway for deployment.',
-    //references: ['Danfoss (Denmark)', 'Grundfos', 'Rockwell Automation', 'Siemens', 'WEF Energy Management Guidelines'],
+    references: [{ "Danfoss": "http://www.danfoss.com/en-in" }],
     images: ['/Photos/Energy-Efficient Smart/Picture72.png']
   },
 
@@ -524,7 +525,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Piloted with utilities in Denmark and Europe for continuous water network monitoring. Achieved world-class leakage reduction rates (5–10%) and improved operational efficiency. Suitable for decentralized and rural networks.',
     limitations: 'Requires steady water flow for energy generation. Coverage depends on communication network availability. Initial setup and calibration can be resource-intensive.',
     status: 'Contact initiated with developers; technology under active piloting and demonstration.',
-    //references: ['Aqua Robur Technologies (Denmark)', 'Grundfos (Denmark)', 'Kamstrup (Denmark)', 'Siemens', 'Sensus/Xylem', 'www.aquarobur.com'],
+    references: [{ "Aqua Robur Technologies": "http://www.aquarobur.com/" }],
     images: ['/Photos/IoT Monitoring for Real-Time Water Network-/Picture73.jpg']
   },
   {
@@ -539,7 +540,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Successfully applied in Danish wastewater treatment plants and research projects by Unisense Environment and DTU Environment. Growing adoption across progressive utilities in Europe and North America.',
     limitations: 'Limited to nitrogen-based emission monitoring. High sensor cost and maintenance requirements. Data interpretation requires process expertise. Not yet a regulatory requirement in most regions.',
     status: 'Emerging operational technology transitioning from research to field-scale deployment.',
-    // references: ['Unisense Environment (Denmark)', 'DTU Environment (Denmark)', 'GWRC Research', 'https://youtu.be/zE3z5IGUP88?si=avdWB4JD6qUy8fg9'],
+    references: [{ "https://youtu.be/zE3z5IGUP88?si=avdWB4JD6qUy8fg9": "https://youtu.be/zE3z5IGUP88?si=avdWB4JD6qUy8fg9", "Mission - Unisense Environment": "https://unisense-environment.com/mission/" }],
     images: ['/Photos/N2O Sensors- Unisense; Denmark/Picture74.png']
   },
 
@@ -556,7 +557,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Widely deployed in Denmark and internationally in wastewater utilities, biogas plants, and industrial sites. Proven under harsh field conditions for long-term monitoring.',
     limitations: 'Sensor requires periodic cleaning and calibration due to fouling in sewers. Needs stable power and telemetry connections. Direct contact with sludge or debris may affect accuracy.',
     status: 'Commercial and widely adopted with proven global installations.',
-    //references: ['SulfiLogger (Denmark)', 'Unisense (Denmark)', 'OdaLog', 'Scientific literature on sewer sulfide control'],
+    references: [{ "SulfiLogger": "http://www.sulfilogger.com/" }],
     images: ['/Photos/H2S Sensor- SulfiLogger; Denmark/Picture76.jpg', '/Photos/H2S Sensor- SulfiLogger; Denmark/Picture75.png']
   },
 
@@ -573,7 +574,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'No specific field applications reported yet. Currently in early-stage evaluation and demonstration.',
     limitations: 'Measurement range limited to approximately 10 meters. Foam and turbulence can interfere with signal accuracy.',
     status: 'Initial response received; presentation scheduling in progress.',
-    //references: ['Tenjine, China', 'Endress+Hauser', 'Siemens', 'ABB'],
+    references: [{ "Tengine, China": "https://en.tengine.com.cn/products_details/63.html" }],
     images: ['/Photos/Ultrasonic Sludge Level/Picture78.jpg', '/Photos/Ultrasonic Sludge Level/Picture77.png']
   },
 
@@ -590,7 +591,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'No specific field application reports available yet. Currently under evaluation and demonstration.',
     limitations: 'Not suitable for higher concentrations of activated sludge (>25 g/L). Requires calibration for accuracy and periodic maintenance of optical components.',
     status: 'Initial response received; presentation scheduling in progress.',
-    //references: ['Tenjine, China', 'Hach (Solitax)', 'Endress+Hauser (Turbimax)', 'Yokogawa'],
+    references: [{ "Tengine, China": "https://en.tengine.com.cn/products_details/87.html#c_relevant_052-1710324098964" }],
     images: ['/Photos/Sludge Concentration Sensor- Tengine; China/Picture79.jpg', '/Photos/Sludge Concentration Sensor- Tengine; China/Picture80.png']
   },
 
@@ -607,7 +608,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Widely implemented across Denmark and Northern Europe in small municipalities and rural areas. Proven operation in Danish plants such as Aarhus Vand with more than 30 years of successful experience.',
     limitations: 'Longer treatment time compared to thermal or pyrolysis methods. Requires large land area and favorable climate. Potential groundwater contamination risk due to leaching. Periodic harvesting required. Not suitable for large plants.',
     status: 'Communication under progress.',
-    //references: ['Danish EPA', 'Aarhus University', 'Sludge Treatment Reed Beds Association', 'Reed Beds'],
+    references: [{ "Reed Beds": "https://vbn.aau.dk/ws/portalfiles/portal/424057861/Reed_bed_vegetation_structure_and_plant_species_diversity_depend_on_management_type_and_the_time_period_since_last_management.pdf" }],
     images: ['/Photos/Reed Beds- Aarhusvand; Denmark/Picture82.jpg', '/Photos/Reed Beds- Aarhusvand; Denmark/Picture81.png']
   },
 
@@ -624,10 +625,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Applied successfully in a municipal wastewater treatment plant in Handan, China.',
     limitations: 'Produces only partial removal of micropollutants.',
     status: 'No initial response received.',
-    // references: [
-    //   'SUEZ',
-    //   'https://www.suez.com/-/media/suezglobal/files/dk/brochures/brochure_dehydris_ultra.pdf?open=true'
-    // ],
+    references: [{ "Suez": "https://www.suez.com/en/denmark/wastewater/sludge-treatment-via-sludge-carbonization", "https://www.suez.com/-/media/suez-global/files/dk/brochures/brochure_dehydris_ultra.pdf?open=true": "https://www.suez.com/-/media/suez-global/files/dk/brochures/brochure_dehydris_ultra.pdf?open=true" }],
     images: ['/Photos/High Temperature & Pressure with catalyst technology-Suez; Denmark/Picture83.jpg', '/Photos/High Temperature & Pressure with catalyst technology-Suez; Denmark/Picture84.png'],
   },
 
@@ -643,11 +641,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Full-scale implementation at several Danish wastewater treatment plants has demonstrated up to 90% reduction in sludge volume and significant carbon capture.',
     limitations: 'Requires consistent sludge input and involves high initial capital investment. Potential release of harmful gases such as dioxins and furans if toxic solids are used.',
     status: 'Not positive response obtained.',
-    // references: [
-    //   'Aquagreen company (Denmark)',
-    //   'https://www.youtube.com/watch?v=RxOmnZtBwnc&t=2s',
-    //   'https://www.sn.dk/art716024/odsherred-kommune/nyhed/epokegoerende-forsoeg-pyrolyse-fjerner-pfas-islam/'
-    // ],
+    references: [{ "Aquagreen company, Denmark.": "https://aquagreen.dk/", "https://www.youtube.com/watch?v=RxOmnZtBwnc&t=2s": "https://www.youtube.com/watch?v=RxOmnZtBwnc&t=2s", "https://www.sn.dk/art716024/odsherred-kommune/nyhed/epokegoerende-forsoeg-pyrolyse-fjerner-pfas-i-slam/": "https://www.sn.dk/art716024/odsherred-kommune/nyhed/epokegoerende-forsoeg-pyrolyse-fjerner-pfas-i-slam/" }],
     images: ['/Photos/Steam-drying and pyrolysis technology/Picture85.png'],
   },
 
@@ -663,7 +657,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Increased the hydraulic capacity of Søholt wastewater treatment plant in Europe by 30%.',
     limitations: 'Only applicable for retrofitting in conventional activated sludge processes.',
     status: 'Initial response not received.',
-    // references: ['SUEZ (Denmark)', 'Suez Densified Sludge'],
+    references: [{ "SUEZ in Denmark": "https://www.suez.com/en/denmark", "Suez": "https://www.suez.com/en/news/press-releases/suez-increases-30-percent-hydraulic-capacity-soholt-wastewater-treatment-plant-thanks-biomass-densification-technology-first-its-kind-scandinavia" }],
     images: ['/Photos/Cyclones Sludge Settler- Suez; Denmark/Picture86.png', '/Photos/Cyclones Sludge Settler- Suez; Denmark/Picture87.png'],
   },
   {
@@ -678,7 +672,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Deployed for customers worldwide, showcasing improved efficiency and cost savings in urban waste collection.',
     limitations: 'Requires sensor installation in bins and an initial investment in the platform.',
     status: 'Communication is under progress.',
-    //references: ['Nordsense (www.nordsense.com)'],
+    references: [{ "Nordsense": "http://www.nordsense.com/" }],
     images: ['/Photos/Smart Waste Management Solution- Nordsense; Denmark/Picture89.jpg', '/Photos/Smart Waste Management Solution- Nordsense; Denmark/Picture88.png'],
   },
 
@@ -694,7 +688,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Utilized by public authorities and private companies in waste management, with pulp use as fertilizer.',
     limitations: 'Requires organized collection of organic waste for optimal performance.',
     status: 'Communication is under progress.',
-    //references: ['Ecogi'],
+    references: [{ "Ecogi": "https://ecogi.dk/en/" }],
     images: ['/Photos/Ecogi System- Ecogi; Denmark/Picture90.png', '/Photos/Ecogi System- Ecogi; Denmark/Picture91.png'],
   },
   {
@@ -709,7 +703,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Global presence with installations in numerous countries for tire recycling, e-waste processing, and other specialized waste streams.',
     limitations: 'High capital investment for full-scale recycling plants.',
     status: 'Communication is under progress.',
-    // references: ['ELDAN Recycling (www.eldan-recycling.com)'],
+    references: [{ " ELDAN Recycling": "http://www.eldan-recycling.com/" }],
     images: ['/Photos/Solid waste Recycling/Picture92.jpg', '/Photos/Solid waste Recycling/Picture93.jpg'],
   },
   {
@@ -724,7 +718,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'The company has installed successful plants in several countries like Latvia and Estonia.',
     limitations: 'Requires investment in specialized sorting equipment.',
     status: 'Communication is under progress.',
-    // references: ['Azortum (www.azortum.com)'],
+    references: [{ "Azortum": "http://www.azortum.com/" }],
     images: ['/Photos/Azortum solid waste sorting/Picture1.png', '/Photos/Azortum solid waste sorting/Picture2.png'],
   },
   {
@@ -739,7 +733,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Multiple operational sites in France, US, Canada, and Spain converting landfill gas into biomethane. 30 landfill gas have been upgraded units in operation worldwide.',
     limitations: 'Requires sufficient methane production from landfill gas and is capital intensive.',
     status: 'Communication is under progress.',
-    // references: ['WAGA Energy www.waga-energy.com'],
+    references: [{ "WAGA Energy": "http://www.waga-energy.com/" }],
     images: [
       '/Photos/WAGABOX® technology/Picture3.jpg',
       '/Photos/WAGABOX® technology/Picture4.png'
