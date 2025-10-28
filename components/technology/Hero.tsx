@@ -23,7 +23,7 @@ export default function Hero() {
         {/* Main Title */}
         <h1 className="text-5xl md:text-6xl font-extrabold mb-10 leading-tight drop-shadow-[0_4px_20px_rgba(0,200,255,0.3)] tracking-wide">
           <span className="bg-gradient-to-r from-blue-300 via-cyan-200 to-blue-400 bg-clip-text text-transparent animate-pulse">
-            TECHNOLOGY FORUM
+            TECHNOLOGY &nbsp; FORUM
           </span>
         </h1>
 
