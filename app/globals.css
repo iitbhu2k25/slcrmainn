@@ -64,3 +64,194 @@ body {
 .bg-glass {
   @apply bg-white/80 backdrop-blur-md;
 }
+/* Optional: Add to your global CSS or Tailwind CSS for enhanced curtain effects */
+
+/* Subtle fabric wave animation */
+@keyframes curtain-wave {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.curtain-wave {
+  animation: curtain-wave 8s ease-in-out infinite;
+  background-size: 200% 100%;
+}
+
+/* Curtain fold shadows */
+.curtain-folds {
+  background-image: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 30px,
+      rgba(0, 0, 0, 0.1) 30px,
+      rgba(0, 0, 0, 0.1) 32px,
+      transparent 32px,
+      transparent 60px,
+      rgba(255, 255, 255, 0.05) 60px,
+      rgba(255, 255, 255, 0.05) 62px
+    );
+}
+
+/* Optional: Add to LaunchCurtain component for extra realism */
+/* 
+Usage in component:
+<motion.div className="... curtain-wave curtain-folds">
+*/
+
+/* Spotlight effect enhancement */
+.spotlight-glow {
+  filter: blur(40px);
+  opacity: 0.3;
+}
+
+/* Theater-style top border (optional) */
+.curtain-valance {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(to bottom, #1a1a1a 0%, transparent 100%);
+  z-index: 10;
+}
+
+/* Optional: Add fringe effect at bottom */
+.curtain-fringe::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background-image: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 4px,
+      rgba(0, 0, 0, 0.3) 4px,
+      rgba(0, 0, 0, 0.3) 5px
+    );
+}
+
+/* Satin/velvet texture enhancement */
+.velvet-texture {
+  background-image: 
+    linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.05) 0%,
+      transparent 50%,
+      rgba(0, 0, 0, 0.1) 100%
+    );
+  background-size: 60px 60px;
+}
+
+/* Rope tie-backs (optional decorative element) */
+.curtain-tieback {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8B7355 0%, #654321 100%);
+  box-shadow: 
+    inset -5px -5px 10px rgba(0, 0, 0, 0.5),
+    inset 5px 5px 10px rgba(255, 255, 255, 0.1);
+}
+
+.curtain-tieback-left {
+  top: 30%;
+  left: -40px;
+}
+
+.curtain-tieback-right {
+  top: 30%;
+  right: -40px;
+}
+
+/* Curtain rod shadow */
+.curtain-rod {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    transparent 100%
+  );
+}
+
+/* Stage lights effect (optional) */
+@keyframes stage-lights {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.stage-light {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  filter: blur(60px);
+  animation: stage-lights 3s ease-in-out infinite;
+}
+
+.stage-light-left {
+  top: -50px;
+  left: 20%;
+  background: rgba(255, 200, 100, 0.3);
+}
+
+.stage-light-right {
+  top: -50px;
+  right: 20%;
+  background: rgba(100, 200, 255, 0.3);
+}
+
+/* Dust particles floating (subtle effect) */
+@keyframes float-particles {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(50px);
+    opacity: 0;
+  }
+}
+
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  animation: float-particles 8s linear infinite;
+}
+
+/* Generate multiple particles with different delays */
+.particle:nth-child(1) { left: 10%; animation-delay: 0s; }
+.particle:nth-child(2) { left: 20%; animation-delay: 1s; }
+.particle:nth-child(3) { left: 30%; animation-delay: 2s; }
+.particle:nth-child(4) { left: 40%; animation-delay: 1.5s; }
+.particle:nth-child(5) { left: 50%; animation-delay: 0.5s; }
+.particle:nth-child(6) { left: 60%; animation-delay: 2.5s; }
+.particle:nth-child(7) { left: 70%; animation-delay: 1.2s; }
+.particle:nth-child(8) { left: 80%; animation-delay: 0.8s; }
+.particle:nth-child(9) { left: 90%; animation-delay: 1.8s; }

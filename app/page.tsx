@@ -1,61 +1,93 @@
-"use client";
+'use client';
 
-import { motion, useScroll, useTransform } from "framer-motion";
-import HeroSection from "@/components/categories";
-import Projects from "./projects/page";
-import ImportantWebsites from "@/components/ImportantWebsites";
-import Hero from "@/components/categories";
-import ImportantLinks from "@/components/ImportantLinks";
-import OurProjects from "@/components/OurProjects";
-import Partnership from "@/components/Partnership";
-import AboutProject from "@/components/AboutProject";
-import React from "react";
+import { useRouter } from 'next/navigation';
+import { Droplets, Leaf, Brain, Trash2 } from 'lucide-react';
+import Hero from '@/components/technology/Hero';
+import CategoryCard from '@/components/technology/CategoryCard';
+import { technologies, categories } from '@/lib/data';
+import LaunchCurtain, { useFirstVisit } from '@/components/curtain/curtain';
 
-// Define the section type
-interface Section {
-  title: string;
-  content: string[];
-}
+export default function Research() {
+  const router = useRouter();
+  const { showCurtain, isChecking, handleComplete } = useFirstVisit();
 
-const sections: Section[] = [
-  {
-    title: "Indo - Denmark Partnership",
-    content: [
-      "Establishment of Smart Laboratory on Clean Rivers in Varanasi (SLCR) is the initiative discussed between the Hon’ble Prime Minister of India, H.E. Shri. Narendra Modi and the Prime Minister of Denmark, H.E. Ms Mette Frederiksen, on 09th October 2021 during the latter’s visit to India.",
-      "SLCR was also mentioned in the India–Denmark Joint Statement released on 3rd May 2021. On 12th September 2022, a Memorandum of Understanding was signed between the Ministry of Jal Shakti and the Danish Environment Ministry as a broad-based framework in the field of Water Resources Development and Management including the SLCR initiative.",
-    ],
-  },
-  {
-    title: "Our Aim",
-    content: [
-      "To bring global knowledge and solutions on holistic and sustainable rejuvenation of small rivers.",
-      "The government of India is dedicated towards clean and sustainable rivers in India. In order to do so, Hon'ble Prime Minister Shri Narendra Modi conceptualised the visionary Smart Laboratory for Clean Rivers (SLCR) an initiative with his Danish counterpart.",
-      "The Smart Laboratory in Varanasi is a platform for knowledge creation and exchange, training, research, and innovation.",
-      "It is providing global and local sustainable solutions for the rejuvenation of streams/rivers and is jointly managed by the Indian and Danish sides.",
-    ],
-  },
-  {
-    title: "Objectives",
-    content: [
-      "Create a platform between Government authorities, Knowledge institutions, technology providers and citizens for knowledge sharing and co-creation to achieve clean river water.",
-      "To bring the global solutions on current challenges in the field of clean river water and conduct research and development to fit in real environment through Living lab approach to make them scalable and economically attractive.",
-      "To Support NMCG in achieving its vision by focussing on small rivers.",
-      "Develop the repository of all collected knowledge and technologies, which can be shared through various initiatives like River Cities Alliance/Global River Cities Alliance to perform rejuvenation work on other small rivers or tributaries in India and in GRCA member countries.",
-      "The main outcomes of the SLCR will be successful demonstration of global solutions in the local context, which have a sound business model and can be up-scaled to other small rivers/tributaries.",
-    ],
-  },
-];
+  const categoryData = [
+    {
+      key: 'decentralized',
+      icon: Droplets,
+      title: categories.decentralized,
+      description: 'Nature-based solutions and decentralized treatment systems',
+      color: 'primary',
+    },
+    {
+      key: 'stp-improvement',
+      icon: Leaf,
+      title: categories['stp-improvement'],
+      description: 'Advanced technologies for enhancing sewage treatment plants',
+      color: 'green',
+    },
+    {
+      key: 'smart-monitoring',
+      icon: Brain,
+      title: categories['smart-monitoring'],
+      description: 'IoT, AI, and sensor technologies for real-time monitoring',
+      color: 'secondary',
+    },
+    {
+      key: 'sludge-treatment',
+      icon: Trash2,
+      title: categories['sludge-treatment'],
+      description: 'Innovative solutions for sludge and solid waste management',
+      color: 'purple',
+    },
+  ];
 
-const Home: React.FC = () => {
+  const getCategoryCount = (category: string) =>
+    technologies.filter((tech) => tech.category === category).length;
+
+  // Show subtle loading state while checking localStorage
+  if (isChecking) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <div className="text-center">
+          <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-primary border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]" />
+          <p className="mt-4 text-gray-600">Loading...</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <>
-      <Hero />
-      <ImportantLinks />
-      <OurProjects />
-      <Partnership />
-      <AboutProject />
-    </>
-  );
-};
+    <main className="min-h-screen">
+      {/* First Visit Curtain Animation */}
+      {showCurtain && <LaunchCurtain onComplete={handleComplete} />}
 
-export default Home;
+      <Hero />
+
+      <section id="categories" className="py-20 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="section-title">Explore by Category</h2>
+            <p className="section-subtitle">
+              Discover innovative technologies across four major categories
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {categoryData.map((category) => (
+              <CategoryCard
+                key={category.key}
+                icon={category.icon}
+                title={category.title}
+                description={category.description}
+                count={getCategoryCount(category.key)}
+                color={category.color}
+                onClick={() => router.push(`/category/${category.key}`)}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}

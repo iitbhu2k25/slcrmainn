@@ -170,7 +170,7 @@
 
           {/* Title */}
           <h1 className="text-center text-gray-900 font-serif font-bold text-2xl md:text-3xl lg:text-4xl">
-            Smart Laboratory on Clean River
+            Smart Laboratory on Clean Rivers
           </h1>
 
           {/* Right Logos */}
@@ -182,34 +182,6 @@
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex justify-center bg-[#081f5c] border-t border-gray-200">
-          <ul className="flex space-x-8 py-3">
-            <NavItem href="/" text="Home" />
-            <Dropdown label="About" isOpen={isDropdownOpen.about} setIsOpen={setIsDropdownOpen} type="about">
-              <DropdownItem href="/about/slcr" text="SLCR" />
-              <DropdownItem href="/about/partner" text="Partner Institutes" />
-            </Dropdown>
-            <NavItem href="/secretariat" text="Secretariat" />
-            <Dropdown label="Projects" isOpen={isDropdownOpen.projects} setIsOpen={setIsDropdownOpen} type="projects">
-              <DropdownItem href="/projects/project1" text="DSS-WRM" />
-              <DropdownItem href="/projects/project2" text="Fingerprint Analysis" />
-              <DropdownItem href="/projects/project3" text="Hydrological Modelling of Varuna" />
-            </Dropdown>
-            <Dropdown label="Activities" isOpen={isDropdownOpen.activities} setIsOpen={setIsDropdownOpen} type="activities">
-              <DropdownItem href="/activities/rhar" text="RHAR 2025" />
-              <DropdownItem href="/activities/peoples_varuna" text="People’s Varuna" />
-            </Dropdown>
-            <NavItem href="/data" text="Data" />
-            <NavItem href="/research" text="Research" />
-            <NavItem href="/media" text="Gallery" />
-            <NavItem href="/contact" text="Contact" />
-          </ul>
-        </div>
-
-        {/* Mobile Hamburger */}
-        <div className="md:hidden flex justify-end bg-[#081f5c] px-4 py-3">
-          <button onClick={() => setIsOpen(!isOpen)} className="text-white">
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
         </div>
 
         {/* Mobile Menu */}
