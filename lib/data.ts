@@ -10,9 +10,9 @@ export interface Technology {
   fieldApplication?: string;
   limitations?: string;
   status?: string;
-  references?: {
-    [key: string]: string;  // key = name, value = link (URL)
-  };
+  references?: [{
+    [key: string]: string; 
+  }];
   images?: string[];
   institution?: string;
   authors?: string[];
@@ -26,7 +26,6 @@ export const categories = {
 };
 
 export const technologies: Technology[] = [
-  // Decentralized units & NBS
   {
     id: 1,
     name: 'Floating Wetland',
@@ -53,7 +52,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Lab testing has been conducted with successful results.',
     limitations: 'Takes longer treatment time compared to conventional wastewater technologies.',
     status: 'Initial presentation conducted. Second phase meeting is in progress.',
-    references: { 'Pinakin Technology Solutions Pvt Ltd': "https://pinakin.co.in/" },
+    references: [{ "Pinakin Technology Solutions Pvt Ltd": "https://pinakin.co.in/" }],
     images: ['/Photos/Photosynthesis Based/Picture3.jpg', '/Photos/Photosynthesis Based/Picture5.png'],
   },
   {
@@ -68,12 +67,12 @@ export const technologies: Technology[] = [
     fieldApplication: 'SBT plant has been developed in IIT Bombay and has been implemented successfully in Bengaluru and Mumbai.',
     limitations: 'SBT type wastewater treatment plants require high land area of around 2.5 m²/m³ of wastewater treatment.',
     status: 'Communication is under progress.',
-    references: { 'https://www.visionearthcare.com/technology/sbt': "https://www.visionearthcare.com/technology/sbt" },
+    references: [{ 'https://www.visionearthcare.com/technology/sbt': "https://www.visionearthcare.com/technology/sbt" }],
     images: ['/Photos/Soil biotechnology (SBT)/Picture6.jpg', '/Photos/Soil biotechnology (SBT)/Picture7.png', '/Photos/Soil biotechnology (SBT)/Picture8.jpg'],
   },
   {
     id: 4,
-    name: 'Compact Constructed Wetland System',
+    name: 'Phytorid',
     country: 'India',
     category: 'decentralized',
     currentGap: 'In India, natural wetland treatment systems occupy a lot of area.',
@@ -83,43 +82,43 @@ export const technologies: Technology[] = [
     fieldApplication: 'Has been successfully implemented in various places such as in Mumbai and Buldhana.',
     limitations: 'Initial cost and time taken for complete cleaning of water body is high.',
     status: 'Communication is in progress.',
-    references: { 'NEERI Nagpur': "https://www.neeri.res.in/contents/banner_details/phytorid-wastewater-treatment-technology/5b193f6eaacd7googtrans(en%7Cen)#googtrans(en|en)" },
+    references: [{ 'NEERI Nagpur': "https://www.neeri.res.in/contents/banner_details/phytorid-wastewater-treatment-technology/5b193f6eaacd7googtrans(en%7Cen)#googtrans(en|en)" }],
     images: ['/Photos/Phytorid/Picture9.png', '/Photos/Phytorid/Picture10.png'],
   },
   {
     id: 5,
-    name: 'Freeze Crystallization Technology',
+    name: 'Freeze Technology',
     country: 'India',
     category: 'decentralized',
     currentGap: 'Conventional technologies for industrial wastewater like evaporators require high energy, crystallizers are costly, and RO has high reject.',
     technology: 'Freezing the wastewater at the water freezing temperature causes easy separation of pollutant and pure ice.',
     novelty: 'Suitable for high strength wastewater and economical compared to conventional RO and evaporation method.',
-    details: 'Recovery of salts from wastewater like NaCl, Na2SO4, CaCl2, CaCO3 with efficiency up to 90-95% can be achieved. Suitable for recovery of clean water from various high strength industrial effluents like dyes, textile, agrochemical, insecticides & pharmaceutical units. Recovery of expensive minerals from waste discharge of mining industry is possible. Also applicable for desalination (making sea water drinkable).',
+    details: 'Recovery of salts from wastewater like NaCl, Na2SO4, CaCl2, CaCO3 with efficiency up to 90-95% can be achieved. Suitable for recovery of clean water from various high strength industrial effluents like Dyes, Textile, Agrochemical, Insecticides & Pharmaceutical units. Recovery of expensive minerals from waste discharge of Mining Industry is possible. Desalination (making sea water drinkable).',
     fieldApplication: 'Successfully implemented and got results for mining industry in India.',
     limitations: 'Less efficient for domestic sewage having less organics (BOD < 500 mg/L).',
     status: 'Initial presentation conducted by company. Second phase meeting is in progress.',
-    references: ['Various Indian research institutions'],
+    // references: ['Various Indian research institutions'],
     images: ['/Photos/Freeze Technology/Picture11.png', '/Photos/Freeze Technology/Picture12.png'],
   },
   {
     id: 6,
-    name: 'Nanobubble Generator Technology',
-    country: 'India',
+    name: 'Nano-Bubble Generators',
+    country: 'USA',
     category: 'decentralized',
     currentGap: 'Conventional aerators produce very less oxygen and have low oxygen dissolution capability.',
     technology: 'The generators produce very fine air bubbles in nanometer size.',
-    novelty: 'Nanobubble generators deliver over 85% oxygen transfer efficiency in the water body.',
+    novelty: 'Nanobubble generators deliver >85% oxygen transfer efficiency in the water body.',
     details: 'It is scalable, retrofittable, and can be easily used for any kind of water body. The system works with gases like oxygen, ozone, and CO₂, and supports a wide range of system capacities. No chemical usage and the oxygen helps in degrading organics which improves water quality.',
     fieldApplication: 'Used in agriculture to boost plant growth, aquaculture to improve fish health, and wastewater to enhance water quality.',
     limitations: 'High initial investment needed.',
     status: 'Initial response received. Presentation was scheduled; no response.',
-    references: ['Moleaer Inc.', 'NICO Nanobubble India Co.', 'Scientific literature in Water Research, Science of the Total Environment, ACS ES&T Engineering'],
+    // references: ['Moleaer Inc.', 'NICO Nanobubble India Co.', 'Scientific literature in Water Research, Science of the Total Environment, ACS ES&T Engineering'],
     images: ['/Photos/Nano-Bubble Generators/Picture13.jpg', '/Photos/Nano-Bubble Generators/Picture14.jpg'],
   },
   {
     id: 7,
-    name: 'Modular Decentralized Wastewater Treatment Units',
-    country: 'India',
+    name: 'Watopi',
+    country: 'Denmark',
     category: 'decentralized',
     currentGap: 'Many rural and peri-urban areas in India lack scalable, affordable, and easily manageable decentralized wastewater treatment infrastructure.',
     technology: 'Modular, prefabricated plug-and-play decentralized wastewater treatment units (e.g., MBRs, SBRs), incorporated with smart monitoring systems.',
@@ -128,12 +127,12 @@ export const technologies: Technology[] = [
     fieldApplication: 'Similar decentralized solutions deployed across 50+ countries including India by various providers.',
     limitations: 'Requires regular service visits for consistent long-term functionality.',
     status: 'Communication is under process.',
-    references: ['Danish water technology companies'],
+    // references: ['Danish water technology companies'],
     images: ['/Photos/Watopi- BioKube, Denmark/Picture15.png', '/Photos/Watopi- BioKube, Denmark/Picture16.jpg', '/Photos/Watopi- BioKube, Denmark/Picture17.jpg'],
   },
   {
     id: 8,
-    name: 'Bio-Electrochemical Treatment Technology (BETT®)',
+    name: 'Microbial Fuel Cell',
     country: 'USA',
     category: 'decentralized',
     currentGap: 'High strength aerobic wastewater degradation requires a lot of energy consumption.',
@@ -143,12 +142,12 @@ export const technologies: Technology[] = [
     fieldApplication: 'Pilot-based study on USA swine wastewater showed maximum 93% COD removal.',
     limitations: 'Not very effective for less polluted wastewater such as domestic sewage (BOD < 500 mg/L).',
     status: 'Initial response received. Presentation was scheduled; no response.',
-    references: ['Various US universities and research institutions', 'Scientific literature on bioelectrochemical systems'],
+    // references: ['Various US universities and research institutions', 'Scientific literature on bioelectrochemical systems'],
     images: ['/Photos/Microbial Fuel Cell- Aquacyl; USA/Picture18.png', '/Photos/Microbial Fuel Cell- Aquacyl; USA/Picture19.jpg'],
   },
   {
     id: 9,
-    name: 'WaterMantra ',
+    name: 'Water Mantra',
     country: 'Singapore',
     category: 'decentralized',
     currentGap: 'RO technology produces a high amount of reject water while giving clean water.',
@@ -158,7 +157,22 @@ export const technologies: Technology[] = [
     fieldApplication: 'On-field application performed at Hindon Canal, Ghaziabad, Uttar Pradesh.',
     limitations: 'Maximum treatment capacity is 150 L/Hr.',
     status: 'Response of SLCR email is awaited.',
-    references: ['Singapore water technology sector'],
+    // references: ['Singapore water technology sector'],
+    images: ['/Photos/Water Mantra-h2Omantra; Singapore/Picture20.png', '/Photos/Water Mantra-h2Omantra; Singapore/Picture21.png', '/Photos/Water Mantra-h2Omantra; Singapore/Picture22.png'],
+  },
+  {
+    id: 9.1,
+    name: 'Water Mantra',
+    country: 'Singapore',
+    category: 'decentralized',
+    currentGap: 'RO technology produces a high amount of reject water while giving clean water.',
+    technology: 'The membranes convert contaminated water into clean water through the membranes with very less space requirement.',
+    novelty: 'Can easily convert contaminated water into purified water without need of electricity.',
+    details: ' Ideal for commercial establishments, rural community where availability of electricity is limited. Can be used at emergency & disaste rrelief, military troops, schools, hospitals.',
+    fieldApplication: ' Onfield application performed at Ramnagar, Bhopal, MadhyaPradesh.',
+    limitations: 'Maximum treatment capacity is 50L/Hr.',
+    status: 'Mail has been sent. At present waiting for their reply.',
+    // references: ['Singapore water technology sector'],
     images: ['/Photos/Water Mantra-h2Omantra; Singapore/Picture20.png', '/Photos/Water Mantra-h2Omantra; Singapore/Picture21.png', '/Photos/Water Mantra-h2Omantra; Singapore/Picture22.png'],
   },
   {
@@ -173,7 +187,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Applied at some places in India.',
     limitations: 'Initial installation cost is very high.',
     status: 'Initial presentation conducted by Pinkain Technology, India. Second phase meeting is in progress.',
-    references: ['Indian electrochemical technology providers', 'IIT research groups'],
+    // references: ['Indian electrochemical technology providers', 'IIT research groups'],
     images: ['/Photos/Electro Oxidation Technology; Pinakin/Picture23.jpg', '/Photos/Electro Oxidation Technology; Pinakin/Picture24.png', '/Photos/Electro Oxidation Technology; Pinakin/Picture25.png'],
   },
   {
@@ -188,12 +202,12 @@ export const technologies: Technology[] = [
     fieldApplication: 'Demonstrated at Evonik, Germany – integration with Xylem’s UV reactor for real-time contaminant removal.',
     limitations: 'Initial investment cost may be high for small facilities. The process is electricity-dependent and not ideal for areas with unreliable power.',
     status: 'No initial response received.',
-    references: ['Danish Environmental Protection Agency', 'Nordic water technology providers'],
+    // references: ['Danish Environmental Protection Agency', 'Nordic water technology providers'],
     images: ['/Photos/Onsite Oxidation- hpnow; Denmark/Picture26.jpg', '/Photos/Onsite Oxidation- hpnow; Denmark/Picture27.jpg'],
   },
   {
     id: 12,
-    name: 'Pulse Plasma- Fidtech',
+    name: 'Pulse Plasma',
     country: 'Germany',
     category: 'decentralized',
     currentGap: 'Conventional advanced oxidation processes take longer treatment time with lesser efficiency.',
@@ -203,7 +217,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Has been implemented successfully in various pilot plant studies with good removal efficiency such as IIT Madras sewage treatment plant.',
     limitations: 'High-voltage operations require high safety protocols, trained personnel, and treatment cost. The process generates nitrate release into water after treatment.',
     status: 'No initial response received.',
-    references: ['German research institutions', 'Fraunhofer Institute', 'Technical universities'],
+    // references: ['German research institutions', 'Fraunhofer Institute', 'Technical universities'],
     images: ['/Photos/Pulse Plasma- Fidtech; Germany/Picture28.png', '/Photos/Pulse Plasma- Fidtech; Germany/Picture29.png', '/Photos/Pulse Plasma- Fidtech; Germany/Picture30.jpg'],
   },
   {
@@ -218,7 +232,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Successfully implemented across various industrial sectors globally.',
     limitations: 'Primarily for industrial wastewater; requires careful pre-treatment for heavily polluted wastewater.',
     status: 'Communication is under progress.',
-    references: ['Danish industry', 'GEA Process Engineering', 'European ZLD providers'],
+    // references: ['Danish industry', 'GEA Process Engineering', 'European ZLD providers'],
     images: ['/Photos/MVR Technology- Envotherm; Denmark/Picture31.png', '/Photos/MVR Technology- Envotherm; Denmark/Picture32.png'],
   },
   {
@@ -233,7 +247,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Has been successfully implemented in various places in India such as during Kumbh, Prayagraj.',
     limitations: 'Utilization of chemical polymer for binding the solids is a concern for discharging. The filter pores are not suitable for long run.',
     status: 'Communication is in progress.',
-    references: ['Solmax International', 'TenCate Geosynthetics', 'Indian and Australian environmental engineering firms'],
+    // references: ['Solmax International', 'TenCate Geosynthetics', 'Indian and Australian environmental engineering firms'],
     images: ['/Photos/Geotubes/Picture33.jpg', '/Photos/Geotubes/Picture34.png'],
   },
   {
@@ -248,38 +262,38 @@ export const technologies: Technology[] = [
     fieldApplication: 'Laguna Niguel Lake, USA had total initial phosphorus of ~270 µg/L which achieved >80% removal. Serpentine Lake, UK had initial phosphorus of ~0.3 mg/L which was reduced to 0.05 mg/L.',
     limitations: 'Treatment cost is comparatively higher than conventional biological processes. Only applicable for phosphorus and not for other nutrients or pollutants.',
     status: 'No initial response received.',
-    references: ['Advanced Water Management Inc.', 'US EPA nutrient removal case studies'],
+    // references: ['Advanced Water Management Inc.', 'US EPA nutrient removal case studies'],
     images: ['/Photos/Poseidon Pellets/Picture35.jpg', '/Photos/Poseidon Pellets/Picture36.jpg', '/Photos/Poseidon Pellets/Picture37.jpg'],
   },
   {
     id: 16,
-    name: 'Coagulation -Flocculation',
+    name: 'Coagulation - Flocculation',
     country: 'China',
     category: 'decentralized',
-    currentGap: 'Conventional coagulants produce less dense flocs with longer treatment time.',
-    technology: 'Addition of coagulants produces flocs with wastewater pollutants followed by their removal.',
-    novelty: 'Exhibits very high floc formation and pollutant removal efficiency for any type of wastewater.',
-    details: 'Acts as an excellent coagulant forming dense flocs with various types of wastewater. These flocs have superior settling properties and require significantly less treatment time compared to conventional coagulants like alum.',
-    fieldApplication: 'Used extensively in municipal wastewater treatment plants (WWTPs) and industrial wastewater applications.',
-    limitations: 'Coagulants cannot be reused after application. Potential issues may arise after testing or prolonged use.',
+    currentGap: 'Conventional coagulants produce lesser dense flocs with longer treatment time.',
+    technology: 'Coagulants addition produces flocs with wastewater pollutants followed by their removal.',
+    novelty: ' Very high floc formation & pollutant removal for any type of wastewater.',
+    details: 'Excellent coagulants which forms flocs with any type of wastewater. Flocs formed are dense and has high settling properties. Requires very less treatment time compared with conventional coagulants like alum.',
+    fieldApplication: 'Used extensively for municipal WWTP and Industrial wastewater.',
+    limitations: 'Coagulants once used can’t be reused again. Coagulants may pose issue after the test',
     status: 'Negative response received.',
-    references: ['Chinese water treatment industry', 'Major coagulant manufacturers in China', 'Research from Tsinghua, Tongji universities'],
+    // references: ['Chinese water treatment industry', 'Major coagulant manufacturers in China', 'Research from Tsinghua, Tongji universities'],
     images: ['/Photos/Coagulation/Picture38.png', '/Photos/Coagulation/Picture39.png'],
   },
   // STP Improvement
   {
     id: 17,
-    name: 'MBR',
+    name: 'Membrane Bioreactor (MBR)',
     country: 'France & USA',
     category: 'stp-improvement',
-    currentGap: 'Conventional activated sludge with clarifiers requires large footprint, produces variable effluent quality, and has limited ability to treat micropollutants.',
-    technology: 'Membrane Bioreactor combines activated sludge biological treatment with membrane filtration (microfiltration or ultrafiltration) for solid-liquid separation.',
-    novelty: 'Eliminates need for secondary clarifiers. Produces high-quality effluent suitable for reuse. Can operate at higher MLSS concentrations (8,000-12,000 mg/L).',
-    details: 'Microorganisms degrade organic matter and nutrients in bioreactor. Membrane module (submerged or external) filters treated water, completely retaining biomass and suspended solids. Produces effluent with near-zero TSS and turbidity, very low BOD (<5 mg/L) and COD, reduced pathogens. Average removal: BOD 88%, COD 84%, TN 65%, TP 60%. Enables longer SRT for nitrification and growth of slow-growing microorganisms. Compact footprint (1/3 to 1/2 of conventional). Effluent suitable for non-potable reuse, irrigation, industrial processes.',
-    fieldApplication: 'Thousands of installations globally including large municipal plants (>100,000 PE). Major installations in France, USA, Asia. Used in water-scarce regions for water reuse. Industrial applications in food/beverage, pharmaceutical, semiconductor industries.',
-    limitations: 'Membrane fouling requiring regular cleaning. Higher energy consumption for aeration and membrane operation. Membrane replacement costs. Requires skilled operation. Capital cost 20-40% higher than conventional treatment.',
-    status: 'Mature commercial technology. Leading vendors: Suez (France), Evoqua (USA), Toray, Mitsubishi.',
-    references: ['Suez Water Technologies', 'Evoqua', 'Membrane Bioreactor Industry Consortium', 'IWA MBR specialist group'],
+    currentGap: 'Conventional technologies such as ASP and SBR require high land, tanks requirement and less solids separation (% ).',
+    technology: 'Utilizes membranes inbiological tank causing less area requirement and moreefficient solids removal.',
+    novelty: ' Provides advanced solids-liquid separation and eliminates the need for secondary clarifiers and can meet the stringent STP norms.  Can also be used as a modular standalone system. Causes less land area requirement (~40% less) and more efficient solids removal (less than 2 mg/l). It is sustainable; lasting for around 15-20 years and economical in long run',
+    details: 'Membrane Bioreactor (MBR) combines biological treatment with membrane filtration. Suitable for municipal sewage, industrial effluents and recycled water systems. Operates at higher MLSS, causing reduced footprint and enhancing treatment capacity.',
+    fieldApplication: 'Used by leading companies like Xylem and Veolia for high-quality wastewater treatment. Xylem’s Sanitaire MBR and Veolia’s Biosep™ are established globally.',
+    limitations: 'High initial capital costs due to membrane purchase and installation.',
+    status: ' Veolia company made their presentation & Xylem company didn’t respond.',
+    // references: ['Suez Water Technologies', 'Evoqua', 'Membrane Bioreactor Industry Consortium', 'IWA MBR specialist group'],
     images: ['/Photos/Membrane Bioreactor/Picture40.png', '/Photos/Membrane Bioreactor/Picture41.jpg'],
   },
   {
@@ -289,8 +303,8 @@ export const technologies: Technology[] = [
     category: 'stp-improvement',
     currentGap: 'Conventional ASP or SBR has suspended technology which gives comparatively lesser  efficiency.High-strength wastewater treatment requires large footprint and complex sludge management systems',
     technology: 'Combined suspended and attached growth technology. Utilizes media on which microbes grow and degrades pollutants.',
-    novelty: 'Advanced biological treatment using biofilm carriers in an aeration tank. High surface-area novel plastic media enhances biofilm growth efficiency.Handles variable loading conditions. Can provide phosphate removal of order of 95 %.',    
-    details:'Treats highly contaminated wastewater effectively using free-floating plastic carriers with high surface area which promotes biofilm growth.• Requires minimal space and is compatible with existing treatment systems.• Meteor™ by SUEZ – a patented MBBR system used globally for complex industrial wastewater.', 
+    novelty: 'Advanced biological treatment using biofilm carriers in an aeration tank. High surface-area novel plastic media enhances biofilm growth efficiency.Handles variable loading conditions. Can provide phosphate removal of order of 95 %.',
+    details: 'Treats highly contaminated wastewater effectively using free-floating plastic carriers with high surface area which promotes biofilm growth.• Requires minimal space and is compatible with existing treatment systems.• Meteor™ by SUEZ – a patented MBBR system used globally for complex industrial wastewater.',
     fieldApplication: 'World’s largest Produced Water treatment plant using MBBR in Fredericia, Denmark. Successfully demonstrated in Banning, CA, USA pilot with aerobic-aerobic-anoxic- aerobic configuration.',
     limitations: 'Some insects, like sewage flies, mosquitoes and red worms, will be attracted to the biofilm and causing decrease in effectiveness of the system. • Manual monitoring is required to ensure the bacteria on the carriers is still alive.',
     status: 'Initial response is awaited.',
@@ -525,7 +539,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Successfully applied in Danish wastewater treatment plants and research projects by Unisense Environment and DTU Environment. Growing adoption across progressive utilities in Europe and North America.',
     limitations: 'Limited to nitrogen-based emission monitoring. High sensor cost and maintenance requirements. Data interpretation requires process expertise. Not yet a regulatory requirement in most regions.',
     status: 'Emerging operational technology transitioning from research to field-scale deployment.',
-  // references: ['Unisense Environment (Denmark)', 'DTU Environment (Denmark)', 'GWRC Research', 'https://youtu.be/zE3z5IGUP88?si=avdWB4JD6qUy8fg9'],
+    // references: ['Unisense Environment (Denmark)', 'DTU Environment (Denmark)', 'GWRC Research', 'https://youtu.be/zE3z5IGUP88?si=avdWB4JD6qUy8fg9'],
     images: ['/Photos/N2O Sensors- Unisense; Denmark/Picture74.png']
   },
 
@@ -581,7 +595,7 @@ export const technologies: Technology[] = [
   },
 
   // Sludge/Solid Waste Treatment
- {
+  {
     id: 37,
     name: 'Reed Beds',
     country: 'Denmark',
@@ -649,7 +663,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Increased the hydraulic capacity of Søholt wastewater treatment plant in Europe by 30%.',
     limitations: 'Only applicable for retrofitting in conventional activated sludge processes.',
     status: 'Initial response not received.',
-   // references: ['SUEZ (Denmark)', 'Suez Densified Sludge'],
+    // references: ['SUEZ (Denmark)', 'Suez Densified Sludge'],
     images: ['/Photos/Cyclones Sludge Settler- Suez; Denmark/Picture86.png', '/Photos/Cyclones Sludge Settler- Suez; Denmark/Picture87.png'],
   },
   {
@@ -695,7 +709,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Global presence with installations in numerous countries for tire recycling, e-waste processing, and other specialized waste streams.',
     limitations: 'High capital investment for full-scale recycling plants.',
     status: 'Communication is under progress.',
-   // references: ['ELDAN Recycling (www.eldan-recycling.com)'],
+    // references: ['ELDAN Recycling (www.eldan-recycling.com)'],
     images: ['/Photos/Solid waste Recycling/Picture92.jpg', '/Photos/Solid waste Recycling/Picture93.jpg'],
   },
   {
@@ -710,7 +724,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'The company has installed successful plants in several countries like Latvia and Estonia.',
     limitations: 'Requires investment in specialized sorting equipment.',
     status: 'Communication is under progress.',
-   // references: ['Azortum (www.azortum.com)'],
+    // references: ['Azortum (www.azortum.com)'],
     images: ['/Photos/Azortum solid waste sorting/Picture1.png', '/Photos/Azortum solid waste sorting/Picture2.png'],
   },
   {
@@ -725,7 +739,7 @@ export const technologies: Technology[] = [
     fieldApplication: 'Multiple operational sites in France, US, Canada, and Spain converting landfill gas into biomethane. 30 landfill gas have been upgraded units in operation worldwide.',
     limitations: 'Requires sufficient methane production from landfill gas and is capital intensive.',
     status: 'Communication is under progress.',
-   // references: ['WAGA Energy www.waga-energy.com'],
+    // references: ['WAGA Energy www.waga-energy.com'],
     images: [
       '/Photos/WAGABOX® technology/Picture3.jpg',
       '/Photos/WAGABOX® technology/Picture4.png'
