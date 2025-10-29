@@ -59,11 +59,8 @@ export default function Research() {
 
   return (
     <main className="min-h-screen">
-      {/* First Visit Curtain Animation */}
       {showCurtain && <LaunchCurtain onComplete={handleComplete} />}
-
       <Hero />
-
       <section id="categories" className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -88,9 +85,20 @@ export default function Research() {
           </div>
         </div>
       </section>
-       <HLSVideoPlayer
-    src="/Videos/master.m3u8"
-  />
+      <div
+        className="w-full mx-auto"
+        style={{
+          backgroundImage: 'url("/background_water.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <HLSVideoPlayer
+          src="/Videos/output.m3u8"
+        />
+      </div>
+
     </main>
   );
 }

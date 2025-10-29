@@ -269,7 +269,8 @@ const VideoSection: React.FC<HLSVideoPlayerProps> = ({
 
   return (
     <section className="py-4 sm:py-8 md:py-12 lg:py-16 px-3 sm:px-4 md:px-6">
-      <div className="w-full max-w-7xl mx-auto">
+
+      <div className="w-full max-w-7xl mx-auto" >
         
 
         {/* Video Container - Fixed fullscreen aspect ratio */}
