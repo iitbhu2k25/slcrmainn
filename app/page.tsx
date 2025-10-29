@@ -6,7 +6,7 @@ import Hero from '@/components/technology/Hero';
 import CategoryCard from '@/components/technology/CategoryCard';
 import { technologies, categories } from '@/lib/data';
 import LaunchCurtain, { useFirstVisit } from '@/components/curtain/curtain';
-
+import HLSVideoPlayer from '@/utils/HlsPlayer';
 export default function Research() {
   const router = useRouter();
   const { showCurtain, isChecking, handleComplete } = useFirstVisit();
@@ -20,23 +20,23 @@ export default function Research() {
       color: 'primary',
     },
     {
-      key: 'stp-improvement',
+      key: 'stp_improvement',
       icon: Leaf,
-      title: categories['stp-improvement'],
+      title: categories['stp_improvement'],
       description: 'Advanced technologies for enhancing sewage treatment plants',
       color: 'green',
     },
     {
-      key: 'smart-monitoring',
+      key: 'smart_monitoring',
       icon: Brain,
-      title: categories['smart-monitoring'],
+      title: categories['smart_monitoring'],
       description: 'IoT, AI, and sensor technologies for real-time monitoring',
       color: 'secondary',
     },
     {
-      key: 'sludge-treatment',
+      key: 'sludge_treatment',
       icon: Trash2,
-      title: categories['sludge-treatment'],
+      title: categories['sludge_treatment'],
       description: 'Innovative solutions for sludge and solid waste management',
       color: 'purple',
     },
@@ -88,6 +88,9 @@ export default function Research() {
           </div>
         </div>
       </section>
+       <HLSVideoPlayer
+    src="/Videos/master.m3u8"
+  />
     </main>
   );
 }
